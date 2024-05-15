@@ -8,7 +8,7 @@ import gym
 
 from env.custom_hopper import *
 from agent import Agent, Policy
-
+from tqdm import tqdm
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -44,7 +44,7 @@ def main():
     # TASK 2 and 3: interleave data collection to policy updates
     #
 
-	for episode in range(args.n_episodes):
+	for episode in tqdm(range(args.n_episodes), desc='Training'):
 		done = False
 		train_reward = 0
 		state = env.reset()  # Reset the environment and observe the initial state
