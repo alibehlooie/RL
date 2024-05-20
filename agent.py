@@ -92,6 +92,8 @@ class Agent(object):
         rewards = torch.stack(self.rewards, dim=0).to(self.train_device).squeeze(-1)
         done = torch.Tensor(self.done).to(self.train_device)
 
+        self.states, self.next_states, self.action_log_probs, self.rewards, self.done = [], [], [], [], []
+
         #
         # TASK 2:
         #   - compute discounted returns
@@ -122,12 +124,15 @@ class Agent(object):
 
         #
         # TASK 3:
-        #   - compute boostrapped discounted return estimates
+        # compute boostrapped discounted return estimates
+        
+            
+
         #   - compute advantage terms
         #   - compute actor loss and critic loss
         #   - compute gradients and step the optimizer
         #
-
+    
         return        
 
 
