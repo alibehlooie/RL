@@ -102,9 +102,9 @@ class Agent(object):
         next_states = torch.stack(self.next_states, dim=0).to(self.train_device).squeeze(-1)
         rewards = torch.stack(self.rewards, dim=0).to(self.train_device).squeeze(-1)
         done = torch.Tensor(self.done).to(self.train_device)
-
+        
         self.states, self.next_states, self.action_log_probs, self.rewards, self.done = [], [], [], [], []
-
+        self.values, self.next_values, self.target_values = [], [], [] 
         #
         # TASK 2:
         #   - compute discounted returns
@@ -140,18 +140,20 @@ class Agent(object):
         values = values.squeeze(-1)
         _,next_values = self.policy(next_states)
         next_values = next_values.squeeze(-1) * (1-done)
-        target_values = rewards + self.gamma * next_values
+        target_values = rewards + self.gamma * next_values.detach()
      
     
         
 
         #   - compute advantage terms
-        advantage = target_values.detach() - values
+        advantage = target_values - values
         #   - compute actor loss and critic loss
         Actor_loss = -(advantage * action_log_probs).mean()
+        Critic_loss = F.mse_loss(values, target_values.detach())
+        loss = Actor_loss + Critic_loss
         #   - compute gradients and step the optimizer
         self.optimizer.zero_grad()
-        Actor_loss.backward()
+        loss.backward()
         self.optimizer.step()
     
     
@@ -162,7 +164,7 @@ class Agent(object):
         """ state -> action (3-d), action_log_densities """
         x = torch.from_numpy(state).float().to(self.train_device)
 
-        normal_dist = self.policy(x)
+        normal_dist,_ = self.policy(x)
 
         if evaluation:  # Return mean
             return normal_dist.mean, None
