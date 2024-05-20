@@ -125,12 +125,12 @@ class Agent(object):
         # Compute advantage (discounted returns - baseline)
         advantage = discount_returns - baseline
         #   - compute policy gradient loss function given actions and returns
-        Policy_loss = -(advantage * action_log_probs).mean()
+        # Policy_loss = -(advantage * action_log_probs).mean()
 
-        #   - compute gradients and step the optimizer
-        self.optimizer.zero_grad()
-        Policy_loss.backward()
-        self.optimizer.step()
+        # #   - compute gradients and step the optimizer
+        # self.optimizer.zero_grad()
+        # Policy_loss.backward()
+        # self.optimizer.step()
 
 
         #
