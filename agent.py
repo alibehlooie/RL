@@ -38,6 +38,12 @@ class Policy(torch.nn.Module):
             Critic network
         """
         # TASK 3: critic network for actor-critic algorithm
+        self.fc1_critic = torch.nn.Linear(state_space, self.hidden)
+        self.fc2_critic = torch.nn.Linear(self.hidden, self.hidden)
+        self.fc3_critic = torch.nn.Linear(self.hidden, 1)
+        
+
+
 
 
         self.init_weights()
@@ -66,9 +72,14 @@ class Policy(torch.nn.Module):
             Critic
         """
         # TASK 3: forward in the critic network
+        x_critic = self.tanh(self.fc1_critic(x))
+        x_critic = self.tanh(self.fc2_critic(x_critic))
+        state_value = self.fc3_critic(x_critic)
+
 
         
-        return normal_dist
+        return normal_dist, state_value
+
 
 
 class Agent(object):
@@ -125,13 +136,24 @@ class Agent(object):
         #
         # TASK 3:
         # compute boostrapped discounted return estimates
+        _,values = self.policy(states)
+        values = values.squeeze(-1)
+        _,next_values = self.policy(next_states)
+        next_values = next_values.squeeze(-1) * (1-done)
+        target_values = rewards + self.gamma * next_values
+     
+    
         
-            
 
         #   - compute advantage terms
+        advantage = target_values.detach() - values
         #   - compute actor loss and critic loss
+        Actor_loss = -(advantage * action_log_probs).mean()
         #   - compute gradients and step the optimizer
-        #
+        self.optimizer.zero_grad()
+        Actor_loss.backward()
+        self.optimizer.step()
+    
     
         return        
 
