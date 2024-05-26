@@ -14,7 +14,7 @@ from stable_baselines3 import SAC
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-episodes', default=10000, type=int, help='Number of training episodes')
-    parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
+    # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
     parser.add_argument('--save', default="model", type=str, help='Save model as ...')
 
     return parser.parse_args()
@@ -36,4 +36,5 @@ def main(args):
 
 if __name__ == '__main__':
     args = parse_args()
+    args.print_every = args.n_episodes/1000
     main(args)
