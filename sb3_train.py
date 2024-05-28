@@ -26,6 +26,26 @@ def parse_args():
     return parser.parse_args()
 
 
+class RewardCallback(BaseCallback):
+    def __init__(self, check_freq: int, verbose: int = 1):
+        super(RewardCallback, self).__init__(verbose)
+        self.check_freq = check_freq
+        self.rewards = []
+
+    def _on_step(self) -> bool:
+        if self.n_calls % self.check_freq == 0:
+            reward_mean = np.mean([info['episode']['r'] for info in self.locals['infos'] if 'episode' in info])
+            self.rewards.append(reward_mean)
+            if self.verbose > 0:
+                print(f"Step {self.n_calls}, Average Reward: {reward_mean}")
+        return True
+
+    def _on_training_end(self) -> None:
+        plt.plot(self.rewards)
+        plt.xlabel('Episode')
+        plt.ylabel('Average Reward')
+        plt.title('Average Reward Over Time')
+        plt.savefig('foo.png')
 
 def main(args):
     train_env = gym.make('CustomHopper-source-v0')
@@ -34,10 +54,15 @@ def main(args):
     print('Action space:', train_env.action_space)  # action-space
     print('Dynamics parameters:', train_env.get_parameters())  # masses of each
     
+    train_env = DummyVecEnv([lambda: train_env])
 
     model = SAC("MlpPolicy", train_env, verbose=1)
-    model.learn(total_timesteps = args.n_episodes, log_interval = args.print_every)
 
+    callback = RewardCallback(check_freq=1000, verbose=1) 
+
+    model.learn(total_timesteps = args.n_episodes, callback=callback)
+
+    print("Saving model to", args.save)
     model.save(args.save)
 
 if __name__ == '__main__':
