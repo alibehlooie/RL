@@ -40,6 +40,7 @@ class RewardTrackerCallback(BaseCallback):
         self.check_freq = check_freq
         self.rewards = []  # List to store episode rewards
         self.verbose = verbose
+        self.current_episode_reward = 0
 
     def _on_training_start(self):
         """
@@ -48,18 +49,20 @@ class RewardTrackerCallback(BaseCallback):
         print("Training started")
         pass
 
-    def _on_step(self):
-        if self.n_calls % self.check_freq == 0:
-            self.rewards.append(self.locals["rewards"][0])  # Directly append the reward
-            if self.verbose > 0:
-                print(f"Episode {len(self.rewards)} - Reward: {self.rewards[-1]}")
+    def _on_step(self) -> bool:
+        self.current_episode_reward += self.locals["rewards"][0]
+        
+        # Check for the end of an episode
+        if self.locals['dones'][0]:
+            self.rewards.append(self.current_episode_reward)  # Append reward at episode end
+            self.current_episode_reward = 0  # Reset for the next episode
         return True
     
     def _on_rollout_end(self) -> None:
         """
         This event is triggered before updating the policy.
         """
-        print("Rollout end (Agent finished an episode)")
+        # print("Rollout end (Agent finished an episode)")
         pass
 
 
@@ -83,7 +86,7 @@ def main(args):
     model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
 
     # Evaluate the trained agent
-    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_steps=10)
+    #mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_steps=10)
 
     # Optional: Early Stopping
     stop_callback = StopTrainingOnRewardThreshold(reward_threshold=2500, verbose=1)
@@ -98,7 +101,7 @@ def main(args):
     plt.savefig("training_rewards.png")
 
     # Print the evaluation results
-    print(f"Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
+    #print(f"Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
 
 
     # Save the model
