@@ -41,19 +41,26 @@ class RewardTrackerCallback(BaseCallback):
         self.rewards = []  # List to store episode rewards
         self.verbose = verbose
 
-     def _on_training_start(self) -> None:
+    def _on_training_start(self):
         """
         This method is called before the first rollout starts.
         """
         print("Training started")
         pass
 
-    def _on_step(self) -> bool:
+    def _on_step(self):
         if self.n_calls % self.check_freq == 0:
             self.rewards.append(self.locals["rewards"][0])  # Directly append the reward
             if self.verbose > 0:
                 print(f"Episode {len(self.rewards)} - Reward: {self.rewards[-1]}")
         return True
+    
+    def _on_rollout_end(self) -> None:
+        """
+        This event is triggered before updating the policy.
+        """
+        print("Rollout end (Agent finished an episode)")
+        pass
 
 
 def main(args):
