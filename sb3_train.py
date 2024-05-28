@@ -74,7 +74,8 @@ def main(args):
     plt.xlabel("Episode")
     plt.ylabel("Reward")
     plt.title("Training Rewards Over Time")
-    plt.show()
+    # plt.show()
+    plt.savefig("training_rewards.png")
 
     # Print the evaluation results
     print(f"Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
