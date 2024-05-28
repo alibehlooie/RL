@@ -25,6 +25,8 @@ def parse_args():
     parser.add_argument('--n-episodes', default=510000, type=int, help='Number of training episodes')
     # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
     parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
+    parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
+    parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
 
     return parser.parse_args()
 
@@ -33,14 +35,18 @@ class RewardTrackerCallback(BaseCallback):
     """
     Custom callback for tracking rewards during training.
     """
-    def __init__(self, verbose=0):
+    def __init__(self, check_freq: int = 10, verbose : int = 1):
         super(RewardTrackerCallback, self).__init__(verbose)
+        self.check_freq = check_freq
         self.rewards = []  # List to store episode rewards
+        self.verbose = verbose
 
-    def _on_step(self):
-        self.rewards.append(self.locals["rewards"][0])  # Directly append the reward
+    def _on_step(self) -> bool:
+        if self.n_calls % self.check_freq == 0:
+            self.rewards.append(self.locals["rewards"][0])  # Directly append the reward
+            if self.verbose > 0:
+                print(f"Episode {len(self.rewards)} - Reward: {self.rewards[-1]}")
         return True
-
 
 
 def main(args):
@@ -51,10 +57,10 @@ def main(args):
     print('Dynamics parameters:', train_env.get_parameters())  # masses of each
     
    
-    model = SAC("MlpPolicy", train_env, verbose=1)
+    model = SAC("MlpPolicy", train_env, verbose = args.verbose-1)
  
     # Use the RewardTrackerCallback
-    reward_tracker = RewardTrackerCallback()
+    reward_tracker = RewardTrackerCallback(check_freq = args.callback_freq, verbose = args.verbose)
     eval_env = gym.make("CustomHopper-source-v0")
     eval_env = DummyVecEnv([lambda: eval_env])
 
