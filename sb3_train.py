@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import gym
 from env.custom_hopper import *
 
-from stable_baselines3 import PPO
+from stable_baselines3 import SAC
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.vec_env import DummyVecEnv
 
