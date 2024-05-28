@@ -77,37 +77,50 @@ def main(args):
     print('Action space:', train_env.action_space)  # action-space
     print('Dynamics parameters:', train_env.get_parameters())  # masses of each
     
-   
-    model = SAC("MlpPolicy", train_env, verbose = args.verbose-1)
- 
+     
     # Use the RewardTrackerCallback
     reward_tracker = RewardTrackerCallback(check_freq = args.callback_freq, verbose = args.verbose)
     eval_env = gym.make("CustomHopper-source-v0")
     eval_env = DummyVecEnv([lambda: eval_env])
 
+    # Create a hyperparameter-grid-search
+    hyperparameters = {
+        # "learning_rate": [1e-3, 3e-4, 1e-4],
+        "learning_rate": [ 1e-3],
+        "gamma": [0.99],
+        # "gamma": [0.99, 0.95, 0.9],
+    }
+    
+    for lr in hyperparameters["learning_rate"]:
+        for gamma in hyperparameters["gamma"]:
+    
+            print("Training with learning rate", lr, "and gamma", gamma)
+    
+            model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, verbose = args.verbose-1)
+            model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
+            print("Training finished")
+    
+            # Plot the training rewards
+            plt.plot(reward_tracker.rewards)
+            plt.xlabel("Episode")
+            plt.ylabel("Reward")
+            plt.title("Training Rewards Over Time")
+            name = "sac_with_rewards/training_rewards_steps" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + ".png"
+            print("Saveing plot to ", name)
+            plt.savefig(name)
 
-    # Train the agent
-    model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
-
-    # Evaluate the trained agent
-    #mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_steps=10)
+            # Save the model
+            name = "sac_with_rewards/model_sac_steps_" + str(args.n_steps) + "lr_" + str(lr) + "_gamma_" + str(gamma) + ".zip"
+            print("Saving model to ", name )
+            model.save(name)
+    
 
     # Optional: Early Stopping
-    stop_callback = StopTrainingOnRewardThreshold(reward_threshold=2500, verbose=1)
-    eval_callback = EvalCallback(eval_env, callback_on_new_best=stop_callback, verbose=1)
-
-    # Plot the training rewards
-    plt.plot(reward_tracker.rewards)
-    plt.xlabel("Episode")
-    plt.ylabel("Reward")
-    plt.title("Training Rewards Over Time")
-    plt.show()
-    plt.savefig("training_rewards.png")
+    # stop_callback = StopTrainingOnRewardThreshold(reward_threshold=2500, verbose=1)
+    # eval_callback = EvalCallback(eval_env, callback_on_new_best=stop_callback, verbose=1)
 
 
-    # Save the model
-    print("Saving model to", args.save)
-    model.save(args.save)
+
 if __name__ == '__main__':
     args = parse_args()
     main(args)
