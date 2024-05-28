@@ -15,37 +15,19 @@ from env.custom_hopper import *
 from stable_baselines3 import SAC
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.vec_env import DummyVecEnv
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.callbacks import EvalCallback, StopTrainingOnRewardThreshold
+from stable_baselines3.common.monitor import Monitor
 
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--n-episodes', default=10000, type=int, help='Number of training episodes')
+    parser.add_argument('--n-episodes', default=5000, type=int, help='Number of training episodes')
     # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
-    parser.add_argument('--save', default="model", type=str, help='Save model as ...')
+    parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
 
     return parser.parse_args()
 
-
-class RewardCallback(BaseCallback):
-    def __init__(self, check_freq: int, verbose: int = 1):
-        super(RewardCallback, self).__init__(verbose)
-        self.check_freq = check_freq
-        self.rewards = []
-
-    def _on_step(self) -> bool:
-        if self.n_calls % self.check_freq == 0:
-            reward_mean = np.mean([info['episode']['r'] for info in self.locals['infos'] if 'episode' in info])
-            self.rewards.append(reward_mean)
-            if self.verbose > 0:
-                print(f"Step {self.n_calls}, Average Reward: {reward_mean}")
-        return True
-
-    def _on_training_end(self) -> None:
-        plt.plot(self.rewards)
-        plt.xlabel('Episode')
-        plt.ylabel('Average Reward')
-        plt.title('Average Reward Over Time')
-        plt.savefig('foo.png')
 
 def main(args):
     train_env = gym.make('CustomHopper-source-v0')
@@ -54,17 +36,31 @@ def main(args):
     print('Action space:', train_env.action_space)  # action-space
     print('Dynamics parameters:', train_env.get_parameters())  # masses of each
     
-    train_env = DummyVecEnv([lambda: train_env])
-
+   
     model = SAC("MlpPolicy", train_env, verbose=1)
 
-    callback = RewardCallback(check_freq=1000, verbose=1) 
+    # Train the agent (Keep this part the same)
+    model.learn(total_timesteps=args.n_episodes)
 
-    model.learn(total_timesteps = args.n_episodes, callback=callback)
+    # Evaluate the trained agent
+    eval_env = gym.make('CustomHopper-source-v0')
+    eval_env = DummyVecEnv([lambda: eval_env])  # Wrap for SB3 evaluation
+    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=10)
+    
+    # Visualize the training rewards
+    rewards = model.ep_reward_mean  # Use ep_reward_mean for rewards per episode
+    plt.plot(rewards)
+    plt.xlabel("Episode")
+    plt.ylabel("Reward")
+    plt.title("Training Rewards Over Time")
+    plt.show()
 
+    # Print the evaluation results
+    print(f"Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
+
+    # Save the model
     print("Saving model to", args.save)
     model.save(args.save)
-
 if __name__ == '__main__':
     args = parse_args()
     args.print_every = args.n_episodes/1000
