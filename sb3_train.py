@@ -41,6 +41,13 @@ class RewardTrackerCallback(BaseCallback):
         self.rewards = []  # List to store episode rewards
         self.verbose = verbose
 
+     def _on_training_start(self) -> None:
+        """
+        This method is called before the first rollout starts.
+        """
+        print("Training started")
+        pass
+
     def _on_step(self) -> bool:
         if self.n_calls % self.check_freq == 0:
             self.rewards.append(self.locals["rewards"][0])  # Directly append the reward
