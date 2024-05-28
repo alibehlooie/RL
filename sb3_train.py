@@ -21,6 +21,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-episodes', default=10000, type=int, help='Number of training episodes')
     # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
+    parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--save', default="model", type=str, help='Save model as ...')
 
     return parser.parse_args()
@@ -58,7 +59,7 @@ def main(args):
 
     model = SAC("MlpPolicy", train_env, verbose=1)
 
-    callback = RewardCallback(check_freq=1000, verbose=1) 
+    callback = RewardCallback(check_freq = args.callback_freq, verbose=1) 
 
     model.learn(total_timesteps = args.n_episodes, callback=callback)
 
