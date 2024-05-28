@@ -22,8 +22,8 @@ from stable_baselines3.common.monitor import Monitor
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--n-episodes', default=510000, type=int, help='Number of training episodes')
-    # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> episodes')
+    parser.add_argument('--n-steps', default=100000, type=int, help='Number of training steps')
+    # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> steps')
     parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
     parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
@@ -66,10 +66,10 @@ def main(args):
 
 
     # Train the agent
-    model.learn(total_timesteps=args.n_episodes, callback=reward_tracker)
+    model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
 
     # Evaluate the trained agent
-    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_episodes=10)
+    mean_reward, std_reward = evaluate_policy(model, eval_env, n_eval_steps=10)
 
     # Optional: Early Stopping
     stop_callback = StopTrainingOnRewardThreshold(reward_threshold=2500, verbose=1)
@@ -92,5 +92,5 @@ def main(args):
     model.save(args.save)
 if __name__ == '__main__':
     args = parse_args()
-    args.print_every = args.n_episodes/1000
+    args.print_every = args.n_steps/1000
     main(args)
