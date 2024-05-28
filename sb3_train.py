@@ -39,6 +39,7 @@ class RewardCallback(BaseCallback):
             self.rewards.append(reward_mean)
             if self.verbose > 0:
                 print(f"Step {self.n_calls}, Average Reward: {reward_mean}")
+                print(self.locals['infos'])
         return True
 
     def _on_training_end(self) -> None:
