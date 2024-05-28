@@ -12,14 +12,9 @@ import matplotlib.pyplot as plt
 import gym
 from env.custom_hopper import *
 
-from stable_baselines3 import SAC
-from stable_baselines import DDPG
-from stable_baselines.ddpg.policies import LnMlpPolicy
-from stable_baselines import results_plotter
-from stable_baselines.bench import Monitor
-from stable_baselines.results_plotter import load_results, ts2xy
-from stable_baselines.common.noise import AdaptiveParamNoiseSpec
-from stable_baselines.common.callbacks import BaseCallback
+from stable_baselines3 import PPO
+from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.vec_env import DummyVecEnv
 
 
 def parse_args():
