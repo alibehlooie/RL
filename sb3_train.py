@@ -23,7 +23,6 @@ from stable_baselines3.common.monitor import Monitor
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-steps', default=100000, type=int, help='Number of training steps')
-    # parser.add_argument('--print-every', default=10, type=int, help='Print info every <> steps')
     parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
     parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
@@ -111,5 +110,4 @@ def main(args):
     model.save(args.save)
 if __name__ == '__main__':
     args = parse_args()
-    args.print_every = args.n_steps/1000
     main(args)
