@@ -85,10 +85,8 @@ def main(args):
 
     # Create a hyperparameter-grid-search
     hyperparameters = {
-        # "learning_rate": [1e-3, 3e-4, 1e-4],
-        "learning_rate": [ 1e-3],
-        "gamma": [0.99],
-        # "gamma": [0.99, 0.95, 0.9],
+         "learning_rate": [1e-3, 3e-4, 1e-4],
+         "gamma": [0.99, 0.95, 0.9],
     }
     
     for lr in hyperparameters["learning_rate"]:
