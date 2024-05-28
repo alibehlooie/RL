@@ -7,6 +7,8 @@ from env.custom_hopper import *
 from gym import Wrapper
 from mujoco_py import GlfwContext
 import glfw
+
+
 # class CameraControlWrapper(Wrapper):
 #     def __init__(self, env):
 #         super().__init__(env)
@@ -49,7 +51,7 @@ def main(args):
 
             state, reward, done, info = env.step(action)
             if render:
-                env.render()
+                env.render("human")
                 glfw.poll_events()  
         
 
