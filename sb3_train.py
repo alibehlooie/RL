@@ -39,8 +39,10 @@ class RewardTrackerCallback(BaseCallback):
         super(RewardTrackerCallback, self).__init__(verbose)
         self.check_freq = check_freq
         self.rewards = []  # List to store episode rewards
+        self.steps_count_list = []
         self.verbose = verbose
         self.current_episode_reward = 0
+        self.steps_count = 0
 
     def _on_training_start(self):
         """
@@ -51,11 +53,14 @@ class RewardTrackerCallback(BaseCallback):
 
     def _on_step(self) -> bool:
         self.current_episode_reward += self.locals["rewards"][0]
+        self.steps_count += 1
         
         # Check for the end of an episode
         if self.locals['dones'][0]:
             self.rewards.append(self.current_episode_reward)  # Append reward at episode end
+            self.steps_count_list.append(self.steps_count) # Append steps count at episode end
             self.current_episode_reward = 0  # Reset for the next episode
+            self.steps_count = 0 # Reset for the next episode
         return True
     
     def _on_rollout_end(self) -> None:
@@ -97,11 +102,8 @@ def main(args):
     plt.xlabel("Episode")
     plt.ylabel("Reward")
     plt.title("Training Rewards Over Time")
-    # plt.show()
+    plt.show()
     plt.savefig("training_rewards.png")
-
-    # Print the evaluation results
-    #print(f"Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
 
 
     # Save the model
