@@ -110,7 +110,7 @@ def main(args):
                     plt.ylabel("Reward")
                     plt.title("Training Rewards Over Time")
                     print("Saving plot to ", "SAC-hyper/"  + name + ".png")
-                    plt.savefig(name, "SAC-hyper/"  + name + ".png")
+                    plt.savefig("SAC-hyper/"  + name + ".png")
 
                     # Save the model
                     print("Saving model to ", "SAC-hyper/"  + name + ".zip" )
