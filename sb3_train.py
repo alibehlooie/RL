@@ -85,32 +85,36 @@ def main(args):
 
     # Create a hyperparameter-grid-search
     hyperparameters = {
-         "learning_rate": [1e-3, 3e-4, 1e-4],
-         "gamma": [0.99, 0.95, 0.9],
+         "learning_rate": [1e-3],
+         "gamma": [0.99],
+         "tau" : [0.0025, 0.005, 0.01],
+         "ent_coef" : ["auto", 0.01],
     }
     
     for lr in hyperparameters["learning_rate"]:
         for gamma in hyperparameters["gamma"]:
-    
-            print("Training with learning rate", lr, "and gamma", gamma)
-    
-            model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, verbose = args.verbose-1)
-            model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
-            print("Training finished")
-    
-            # Plot the training rewards
-            plt.plot(reward_tracker.rewards)
-            plt.xlabel("Episode")
-            plt.ylabel("Reward")
-            plt.title("Training Rewards Over Time")
-            name = "sac_with_rewards/training_rewards_steps" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + ".png"
-            print("Saveing plot to ", name)
-            plt.savefig(name)
+            for tau in hyperparameters["tau"]:
+                for ent_coef in hyperparameters["ent_coef"]:
+                    
+                    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
 
-            # Save the model
-            name = "sac_with_rewards/model_sac_steps_" + str(args.n_steps) + "lr_" + str(lr) + "_gamma_" + str(gamma) + ".zip"
-            print("Saving model to ", name )
-            model.save(name)
+                    print("Training with learning rate", lr, "and gamma", gamma)
+    
+                    model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, verbose = args.verbose-1)
+                    model.learn(total_timesteps=args.n_steps, callback=reward_tracker, progress_bar= True)
+                    print("Training finished")
+
+                    # Plot the training rewards
+                    plt.plot(reward_tracker.rewards)
+                    plt.xlabel("Episode")
+                    plt.ylabel("Reward")
+                    plt.title("Training Rewards Over Time")
+                    print("Saving plot to ", "SAC-hyper/"  + name + ".png")
+                    plt.savefig(name, "SAC-hyper/"  + name + ".png")
+
+                    # Save the model
+                    print("Saving model to ", "SAC-hyper/"  + name + ".zip" )
+                    model.save("SAC-hyper/"  + name + ".zip" )
     
 
     # Optional: Early Stopping
