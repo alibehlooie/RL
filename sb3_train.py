@@ -120,7 +120,7 @@ def main(args):
                         )
 
     
-                    model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, verbose = args.verbose-1)
+                    model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
                     model.learn(total_timesteps=args.n_steps, callback=eval_callback, progress_bar= True)
                     print("Training finished")
 
