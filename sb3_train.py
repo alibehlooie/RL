@@ -83,10 +83,10 @@ def main(args):
 
     # Create a hyperparameter-grid-search
     hyperparameters = {
-         "learning_rate": [1e-3, 3e-4, 1e-4],
-         "gamma": [0.995, 0.99, 0.95, 0.9],
-         "tau" : [0.0025, 0.005, 0.01],
-         "ent_coef" : ["auto", 0.01],
+         "learning_rate": [1e-3],
+         "gamma": [0.99],
+         "tau" : [0.005],
+         "ent_coef" : ["auto"],
     }
     
     for lr in hyperparameters["learning_rate"]:
@@ -103,7 +103,7 @@ def main(args):
                     print("Training " + name)
                     
                     dir_name = "SAC-hyper-eval_callback/" + name + "/"
-                    reward_pic = dir_name + name + ".png"
+                    reward_pic = "Reward_Pics" +  name + ".png"
                     
                     # check if rewardPic file already exists
                     if os.path.isfile(reward_pic):
