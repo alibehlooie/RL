@@ -71,17 +71,14 @@ class RewardTrackerCallback(BaseCallback):
 
 
 def main(args):
-    train_env = gym.make('CustomHopper-source-v0')
 
-    print('State space:', train_env.observation_space)  # state-space
-    print('Action space:', train_env.action_space)  # action-space
-    print('Dynamics parameters:', train_env.get_parameters())  # masses of each
+    # print('State space:', train_env.observation_space)  # state-space
+    # print('Action space:', train_env.action_space)  # action-space
+    # print('Dynamics parameters:', train_env.get_parameters())  # masses of each
     
      
     # Use the RewardTrackerCallback
     reward_tracker = RewardTrackerCallback(check_freq = args.callback_freq, verbose = args.verbose)
-    eval_env = gym.make("CustomHopper-source-v0")
-    eval_env = DummyVecEnv([lambda: eval_env])
 
     # Create a hyperparameter-grid-search
     hyperparameters = {
@@ -96,24 +93,31 @@ def main(args):
             for tau in hyperparameters["tau"]:
                 for ent_coef in hyperparameters["ent_coef"]:
                     
-                    dir_name = "SAC-hyper-eval_callback/"
-                    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "/"
+                    train_env = gym.make('CustomHopper-source-v0')
+
+                    eval_env = gym.make("CustomHopper-source-v0")
+                    eval_env = DummyVecEnv([lambda: eval_env])
+                    
+                    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
+                    print("Training " + name)
+                    
+                    dir_name = "SAC-hyper-eval_callback/" + name + "/"
+                    
                     eval_callback = EvalCallback(
                         eval_env,
                         n_eval_episodes=10,   # Number of episodes to evaluate 
                         eval_freq=1000,       # Evaluate every 1000 steps 
-                        log_path= dir_name + name,   # Where to log results (if desired)
-                        best_model_save_path= dir_name + name, # Where to save the best model (if desired)
+                        log_path= dir_name,   # Where to log results (if desired)
+                        best_model_save_path= dir_name, # Where to save the best model (if desired)
                         deterministic=True    # Use deterministic actions for evaluation
                         )
 
-                    print("Training with learning rate", lr, "and gamma", gamma)
     
                     model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, verbose = args.verbose-1)
                     model.learn(total_timesteps=args.n_steps, callback=eval_callback, progress_bar= True)
                     print("Training finished")
 
-                    eval_results = np.load(dir_name + name + '/evaluations.npz') 
+                    eval_results = np.load(dir_name + '/evaluations.npz') 
                     rewards = eval_results['results'][:, 0]  
                     lengths = eval_results['results'][:, 1]
                     timesteps = eval_results['timesteps']   
@@ -124,13 +128,8 @@ def main(args):
                     plt.xlabel('Timesteps')
                     plt.ylabel('Mean Reward')
                     plt.title('Evaluation Rewards Over Time')
-                    # plt.show()
-                    plt.savefig(dir_name + name + "rewardPic" + ".png")
+                    plt.savefig(dir_name + "rewardPic" + ".png")
 
-
-
-
-    
 
     # Optional: Early Stopping
     # stop_callback = StopTrainingOnRewardThreshold(reward_threshold=2500, verbose=1)
