@@ -103,7 +103,7 @@ def main(args):
                     print("Training " + name)
                     
                     dir_name = "SAC-hyper-eval_callback/" + name + "/"
-                    reward_pic = "Reward_Pics" +  name + ".png"
+                    reward_pic = "Reward_Pics/" +  name + ".png"
                     
                     # check if rewardPic file already exists
                     if os.path.isfile(reward_pic):

@@ -1,7 +1,15 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-eval_results = np.load('logs/evaluations.npz') 
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--log-dir", type=str, default="logs")
+args = parser.parse_args()
+filename = args.log_dir + "/evaluations.npz"
+
+eval_results = np.load(filename) 
 rewards = eval_results['results'][:, 0]  
 lengths = eval_results['results'][:, 1]
 timesteps = eval_results['timesteps']   
@@ -22,5 +30,5 @@ plt.plot(timesteps, rewards)
 plt.xlabel('Timesteps')
 plt.ylabel('Mean Reward')
 plt.title('Evaluation Rewards Over Time')
-# plt.show()
-plt.savefig("logs/"  + "rewardPic" + ".png")
+plt.show()
+# plt.savefig("logs/"  + "rewardPic" + ".png")
