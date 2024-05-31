@@ -134,7 +134,7 @@ def main(args):
                     plt.plot(timesteps, rewards)
                     plt.xlabel('Timesteps')
                     plt.ylabel('Mean Reward')
-                    plt.title('Evaluation Rewards Over Time')
+                    plt.title(name)
                     plt.savefig(reward_pic)
 
 
