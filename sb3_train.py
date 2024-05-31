@@ -83,10 +83,10 @@ def main(args):
 
     # Create a hyperparameter-grid-search
     hyperparameters = {
-         "learning_rate": [1e-3],
-         "gamma": [0.99],
-         "tau" : [0.005],
-         "ent_coef" : ["auto"],
+         "learning_rate": [1e-3, 3e-4, 1e-4],
+         "gamma": [0.995, 0.99, 0.95],
+         "tau" : [0.0025, 0.005, 0.01],
+         "ent_coef" : ["auto", 1],
     }
     
     for lr in hyperparameters["learning_rate"]:
