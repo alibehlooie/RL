@@ -8,6 +8,7 @@ import argparse
 
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 import gym
 from env.custom_hopper import *
@@ -102,7 +103,13 @@ def main(args):
                     print("Training " + name)
                     
                     dir_name = "SAC-hyper-eval_callback/" + name + "/"
+                    reward_pic = dir_name + "rewardPic" + ".png"
                     
+                    # check if rewardPic file already exists
+                    if os.path.isfile(reward_pic):
+                        print("File already exists, not training again")
+                        continue
+
                     eval_callback = EvalCallback(
                         eval_env,
                         n_eval_episodes=10,   # Number of episodes to evaluate 
@@ -128,7 +135,7 @@ def main(args):
                     plt.xlabel('Timesteps')
                     plt.ylabel('Mean Reward')
                     plt.title('Evaluation Rewards Over Time')
-                    plt.savefig(dir_name + "rewardPic" + ".png")
+                    plt.savefig(reward_pic)
 
 
     # Optional: Early Stopping
