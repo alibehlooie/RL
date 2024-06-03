@@ -25,7 +25,7 @@ import numpy as np
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', default="model", type=str, help='Read model from ...')
-    parser.add_argument('--n-episodes', default=100, type=int, help='Number of episodes to test')
+    parser.add_argument('--n-episodes', default=50, type=int, help='Number of episodes to test')
     parser.add_argument('--render', default=True, action='store_true', help='Render the simulator')
     parser.add_argument('--no-render', dest='render', action='store_false', help='Do not render the simulator')
     parser.add_argument('--env', default='source', type=str, help='source or target env')
@@ -57,23 +57,40 @@ def main(args):
         done = False
         state = env.reset()
         total_reward = 0
+        step_count = 0
 
         while not done:
             action, _states = model.predict(state, deterministic=True)
 
             state, reward, done, info = env.step(action)
             total_reward += reward
+            step_count += 1
             
             if render:
                 env.render("human")
                 glfw.poll_events()
 
-        print(f"Episode {i} reward: {total_reward}")
+        print(f"Episode {i} reward: {total_reward} in total {step_count} steps")
         rewards_list = np.append(rewards_list, total_reward)
 
+    if("source" in args.model):
+        if(args.env == 'source'):
+            title = "source --> source"
+        elif(args.env == 'target'):
+            title = "source --> target"
+    elif("target" in args.model):
+        if(args.env == 'source'):
+            title = "target --> source"
+        elif(args.env == 'target'):
+            title = "target --> target"
+    
+    mean = np.mean(rewards_list)
+    std = np.std(rewards_list)
+    print(f"Mean reward: {mean}, std: {std}")
     plt.hist(rewards_list, bins=20)
     plt.show()
-    plt.savefig('rewards.png')
+    plt.title(title + " (mean: " + str(round(mean)) + ")")
+    plt.savefig(title + ".png")
         
 
 if __name__ == '__main__':

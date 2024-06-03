@@ -27,6 +27,7 @@ def parse_args():
     parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
     parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
+    parse.add_argument('--env', default='source', type=str, help='source or target env')
 
     return parser.parse_args()
 
@@ -94,9 +95,13 @@ def main(args):
             for tau in hyperparameters["tau"]:
                 for ent_coef in hyperparameters["ent_coef"]:
                     
-                    train_env = gym.make('CustomHopper-target-v0')
-
-                    eval_env = gym.make("CustomHopper-target-v0")
+                    if(args.env == 'source'):
+                        train_env = gym.make('CustomHopper-source-v0')
+                        eval_env = gym.make("CustomHopper-source-v0")
+                    elif(args.env == 'target'):
+                        train_env = gym.make('CustomHopper-target-v0')
+                        eval_env = gym.make("CustomHopper-target-v0")
+                    
                     eval_env = DummyVecEnv([lambda: eval_env])
                     
                     name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
