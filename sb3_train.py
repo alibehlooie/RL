@@ -94,9 +94,9 @@ def main(args):
             for tau in hyperparameters["tau"]:
                 for ent_coef in hyperparameters["ent_coef"]:
                     
-                    train_env = gym.make('CustomHopper-source-v0')
+                    train_env = gym.make('CustomHopper-target-v0')
 
-                    eval_env = gym.make("CustomHopper-source-v0")
+                    eval_env = gym.make("CustomHopper-target-v0")
                     eval_env = DummyVecEnv([lambda: eval_env])
                     
                     name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
