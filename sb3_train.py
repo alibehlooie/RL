@@ -27,7 +27,7 @@ def parse_args():
     parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
     parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
-    parse.add_argument('--env', default='source', type=str, help='source or target env')
+    parser.add_argument('--env', default='source', type=str, help='source or target env')
 
     return parser.parse_args()
 
