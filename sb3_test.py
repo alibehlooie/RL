@@ -73,6 +73,7 @@ def main(args):
         print(f"Episode {i} reward: {total_reward} in total {step_count} steps")
         rewards_list = np.append(rewards_list, total_reward)
 
+    title =  "source --> source"
     if("source" in args.model):
         if(args.env == 'source'):
             title = "source --> source"
