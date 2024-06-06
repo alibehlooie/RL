@@ -19,6 +19,8 @@ from stable_baselines3.common.vec_env import DummyVecEnv
 from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.callbacks import EvalCallback, StopTrainingOnRewardThreshold
 from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.callbacks import CallbackList
+from copy import copy, deepcopy
 
 
 def parse_args():
@@ -38,6 +40,42 @@ def RandomizedEnv(env, u = 1):
     env.sim.model.body_mass[2] = env.sim.model.body_mass[2] + r[1]
     env.sim.model.body_mass[3] = env.sim.model.body_mass[3] + r[2]
     return env
+
+class DomainRandomizationCallback(BaseCallback):
+    def __init__(self, u = 0.5, verbose=0):
+        self.u = u
+        super().__init__(verbose)   
+    
+    def _on_training_start(self) -> None:
+        self.init_env = copy(self.training_env.envs[0].unwrapped)
+        self.episode_counter = 0
+        self.step_counter = 0
+    
+    def _on_step(self) -> bool:
+        # print("On step")
+        self.step_counter += 1
+
+        # at the end of the episode
+        if self.locals['dones'][0]:
+            self.episode_counter += 1
+            env = self.locals["env"].envs[0]
+            env.model.body_mass[2] = self.init_env.model.body_mass[2] * np.random.uniform(1 - self.u, 1 + self.u)
+            env.model.body_mass[3] = self.init_env.model.body_mass[3] * np.random.uniform(1 - self.u, 1 + self.u)
+            env.model.body_mass[4] = self.init_env.model.body_mass[4] * np.random.uniform(1 - self.u, 1 + self.u)
+            print(f"Episode {self.episode_counter} had {self.step_counter} steps -> Randomize env: ", env.model.body_mass)
+            self.step_counter = 0
+
+        return True
+
+    def _on_training_end(self) -> None:
+        print(f"Training end for {self.episode_counter} episodes")
+        print(f"finally masses are: ", self.training_env.envs[0].unwrapped.model.body_mass)
+        pass
+
+randomize_callback = DomainRandomizationCallback(u=0.5)
+
+randomize_callback = DomainRandomizationCallback()
+
 
 
 def main(args):
@@ -87,10 +125,13 @@ def main(args):
                             best_model_save_path= dir_name, # Where to save the best model (if desired)
                             deterministic=True    # Use deterministic actions for evaluation
                             )
+                        
+                        randomize_callback = DomainRandomizationCallback(u = u)
 
-    
+                        callback = CallbackList([randomize_callback, eval_callback])
+
                         model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
-                        model.learn(total_timesteps=args.n_steps, callback=eval_callback, progress_bar= True)
+                        model.learn(total_timesteps=args.n_steps, callback=callback, progress_bar= True)
                         print("Training finished")
 
                         eval_results = np.load(dir_name + '/evaluations.npz') 
@@ -105,7 +146,6 @@ def main(args):
                         plt.ylabel('Mean Reward')
                         plt.title(name)
                         plt.savefig(reward_pic)
-
 
 
 if __name__ == '__main__':
