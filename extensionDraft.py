@@ -1,8 +1,7 @@
-extension 
-
-""" Implement Domain Randomization:
-First, modify your Hopper environment to include randomizable parameters. These could include mass, friction, gravity, etc."""
-```
+"""
+Implement Domain Randomization:
+First, modify your Hopper environment to include randomizable parameters. These could include mass, friction, gravity, etc.
+"""
 import numpy as np
 from gym.envs.mujoco import HopperEnv
 
@@ -28,12 +27,12 @@ class RandomizedHopperEnv(HopperEnv):
         self.model.geom_friction[:] = self.original_frictions * friction_multipliers
 
         # You can add more parameter randomizations here
-```
+
 """
 Implement AutoDR:
 AutoDR adjusts the randomization ranges based on the agent's performance. We'll create a wrapper class for this
 """
-```
+
 class AutoDR:
     def __init__(self, env, performance_threshold, adaptation_rate=0.1):
         self.env = env
@@ -73,12 +72,13 @@ class AutoDR:
 
         friction_multipliers = np.random.uniform(*friction_range, size=self.env.model.geom_friction.shape)
         self.env.model.geom_friction[:] = self.env.original_frictions * friction_multipliers
-    ```
-    """
-    step3 : Modify your training loop:
+
+"""
+step3 : Modify your training loop:
 Integrate AutoDR into your SAC training process.
 """
-```import gym
+
+import gym
 from stable_baselines3 import SAC
 from stable_baselines3.common.evaluation import evaluate_policy
 
@@ -89,7 +89,7 @@ env = RandomizedHopperEnv()
 auto_dr = AutoDR(env, performance_threshold=1000)  # Adjust the threshold as needed
 
 # Initialize the SAC model
-model = SAC(MlpPolicy, auto_dr.get_randomized_env(), verbose=1)
+model = SAC("MlpPolicy", auto_dr.get_randomized_env(), verbose=1)
 
 # Training loop
 total_timesteps = 1000000
@@ -110,10 +110,10 @@ while timesteps < total_timesteps:
 
 # Save the final model
 model.save("sac_hopper_autodr")
-```
+
 """Analysis and Evaluation:
 After training, you should evaluate your model's performance in both randomized and non-randomized environments to assess the effectiveness of the AutoDR approach."""
-```
+
 # Evaluate in randomized environment
 randomized_env = RandomizedHopperEnv(randomize_params=True)
 mean_reward_random, std_reward_random = evaluate_policy(model, randomized_env, n_eval_episodes=100)
@@ -123,6 +123,3 @@ print(f"Randomized Environment - Mean reward: {mean_reward_random:.2f} +/- {std_
 non_randomized_env = RandomizedHopperEnv(randomize_params=False)
 mean_reward_non_random, std_reward_non_random = evaluate_policy(model, non_randomized_env, n_eval_episodes=100)
 print(f"Non-randomized Environment - Mean reward: {mean_reward_non_random:.2f} +/- {std_reward_non_random:.2f}") 
-```
-
-    
