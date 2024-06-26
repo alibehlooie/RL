@@ -21,13 +21,13 @@ def parse_args():
 
 class AutoDR:
     def __init__(self, env, performance_threshold, adaptation_rate=0.1):
-        self.init_env = copy(self.training_env.envs[0].unwrapped)
+        self.init_env = copy(env.unwrapped)
         self.env = env
         self.performance_threshold = performance_threshold
         self.adaptation_rate = adaptation_rate
         self.randomization_ranges = {
-            'mass': (0.8, 1.2),
-            'friction': (0.8, 1.2)
+            'mass': (1, 1),
+            'friction': (1, 1)
         }
 
     def update_ranges(self, performance):
@@ -88,7 +88,7 @@ def main(args):
     # env = gym.make('CustomHopper-source-v0')
     # eval_env = gym.make("CustomHopper-source-v0")
 
-    total_timesteps = 10000
+    total_timesteps = args.n_steps
     eval_interval = 100
     timesteps = 0
 
@@ -104,7 +104,7 @@ def main(args):
     tau = 0.01
     ent_coef = "auto"
 
-    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "AutoDR"
+    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
 
     dir_name = "AutoDR/" + name + "/"
     
