@@ -7,6 +7,9 @@ from stable_baselines3.common.evaluation import evaluate_policy
 from stable_baselines3.common.callbacks import EvalCallback
 import argparse
 
+from copy import copy
+
+
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-steps', default=100000, type=int, help='Number of training steps')
@@ -16,32 +19,9 @@ def parse_args():
 
     return parser.parse_args()
 
-
-class RandomizedHopperEnv(HopperEnv):
-    def __init__(self, randomize_params=True):
-        super().__init__()
-        self.randomize_params = randomize_params
-        self.original_masses = self.model.body_mass.copy()
-        self.original_frictions = self.model.geom_friction.copy()
-
-    def reset(self):
-        if self.randomize_params:
-            self._randomize_parameters()
-        return super().reset()
-
-    def _randomize_parameters(self):
-        # Randomize masses
-        mass_multipliers = np.random.uniform(0.8, 1.2, size=self.model.body_mass.shape)
-        self.model.body_mass[:] = self.original_masses * mass_multipliers
-
-        # Randomize friction
-        friction_multipliers = np.random.uniform(0.8, 1.2, size=self.model.geom_friction.shape)
-        self.model.geom_friction[:] = self.original_frictions * friction_multipliers
-
-
 class AutoDR:
     def __init__(self, env, performance_threshold, adaptation_rate=0.1):
-        self.init_env = env
+        self.init_env = copy(self.training_env.envs[0].unwrapped)
         self.env = env
         self.performance_threshold = performance_threshold
         self.adaptation_rate = adaptation_rate
