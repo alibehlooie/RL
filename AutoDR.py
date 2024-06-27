@@ -41,15 +41,7 @@ class AutoDR:
             self.randomize_env()
 
             print("Mass are now: ", self.env.model.body_mass[2:])
-        # else:
-            # Decrease randomization range
-            # if we are lower than the threshold, keep the weights as they are -> set the range to (1, 1)
-            # self.randomization_ranges = {
-                # 'mass': (1, 1),
-                # 'friction': (1, 1)
-            # }
-            
-        
+        # else remain the same            
         
 
     def _adjust_ranges(self, adjustment):
@@ -84,20 +76,13 @@ class AutoDR:
 
 
 def main(args):
-    
-    # env = gym.make('CustomHopper-source-v0')
-    # eval_env = gym.make("CustomHopper-source-v0")
-
     total_timesteps = args.n_steps
     eval_interval = 100
     timesteps = 0
 
-    if(args.env == 'source'):
-        train_env = gym.make('CustomHopper-source-v0')
-        eval_env = gym.make("CustomHopper-source-v0")
-    elif(args.env == 'target'):
-        train_env = gym.make('CustomHopper-target-v0')
-        eval_env = gym.make("CustomHopper-target-v0")
+    
+    train_env = gym.make('CustomHopper-source-v0')
+    eval_env = gym.make("CustomHopper-source-v0")
 
     lr = 1e-3
     gamma = 0.995
@@ -109,21 +94,10 @@ def main(args):
     dir_name = "AutoDR/" + name + "/"
     
     # Initialize AutoDR
-    auto_dr = AutoDR(train_env, performance_threshold = 800, adaptation_rate=0.05)  # Adjust the threshold as needed
+    # Adjust the threshold as needed
+    auto_dr = AutoDR(train_env, performance_threshold = 800, adaptation_rate=0.05)  
 
-
-    model = SAC("MlpPolicy", auto_dr.get_randomized_env(), verbose=1)
-
-    # eval_callback = EvalCallback(
-    #     eval_env,
-    #     n_eval_episodes=10,   # Number of episodes to evaluate 
-    #     eval_freq=1000,       # Evaluate every 1000 steps 
-    #     log_path= dir_name,   # Where to log results (if desired)
-    #     best_model_save_path= dir_name, # Where to save the best model (if desired)
-    #     deterministic=True    # Use deterministic actions for evaluation
-    #     )
-
-    # model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
+    model = SAC("MlpPolicy", auto_dr.get_randomized_env(), learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
 
     eval_results = []
 
@@ -133,7 +107,7 @@ def main(args):
         timesteps += eval_interval
 
         # Evaluate the model
-        mean_reward, _ = evaluate_policy(model, model.get_env(), n_eval_episodes=10)
+        mean_reward, _ = evaluate_policy(model, eval_env, n_eval_episodes=10)
         print(f"Timesteps: {timesteps}, Mean reward: {mean_reward:.2f}")
         eval_results.append(mean_reward)
 
