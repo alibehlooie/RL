@@ -9,6 +9,7 @@ from mujoco_py import GlfwContext
 import glfw
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 
 # class CameraControlWrapper(Wrapper):
@@ -41,11 +42,12 @@ def main(args):
     else :
         print('Invalid environment')
         return
-
     
     print('State space:', env.observation_space)  # state-space
     print('Action space:', env.action_space)  # action-space
     print('Dynamics parameters:', env.get_parameters())  # masses of each
+
+    directory = os.path.dirname(args.model)
 
     model = SAC.load(args.model)
 
@@ -73,17 +75,7 @@ def main(args):
         print(f"Episode {i} reward: {total_reward} in total {step_count} steps")
         rewards_list = np.append(rewards_list, total_reward)
 
-    title =  "source --> source"
-    if("source" in args.model):
-        if(args.env == 'source'):
-            title = "source --> source"
-        elif(args.env == 'target'):
-            title = "source --> target"
-    elif("target" in args.model):
-        if(args.env == 'source'):
-            title = "target --> source"
-        elif(args.env == 'target'):
-            title = "target --> target"
+    title = "target" if "target" in args.model else "source" + "-" + args.env
     
     mean = np.mean(rewards_list)
     std = np.std(rewards_list)
@@ -91,9 +83,10 @@ def main(args):
     plt.hist(rewards_list, bins=20)
     plt.show()
     plt.title(title + " (mean: " + str(round(mean)) + ")")
-    plt.savefig(title + ".png")
+    filename = os.path.join(".", directory, title + ".png")
+    print("Saving plot as: ", filename)
+    plt.savefig(filename)
         
-
 if __name__ == '__main__':
     args = parse_args()
     main(args)
