@@ -20,14 +20,15 @@ def parse_args():
     return parser.parse_args()
 
 class AutoDR:
-    def __init__(self, env, performance_threshold, adaptation_rate=0.1):
+    def __init__(self, env, performance_threshold, adaptation_rate=0.1, u = 0.5):
         self.init_env = copy(env.unwrapped)
         self.env = env
         self.performance_threshold = performance_threshold
         self.adaptation_rate = adaptation_rate
+        self.u = u
         self.randomization_ranges = {
-            'mass': (1, 1),
-            'friction': (1, 1)
+            'mass': (1, 1)
+            # 'friction': (1, 1)
         }
 
     def update_ranges(self, performance):
@@ -47,8 +48,8 @@ class AutoDR:
     def _adjust_ranges(self, adjustment):
         for key in self.randomization_ranges:
             lower, upper = self.randomization_ranges[key]
-            new_lower = min(1, max(0, lower - adjustment))
-            new_upper = max(1, min(2, upper + adjustment))
+            new_lower = min(1, max(1 - self.u, lower - adjustment))
+            new_upper = max(1, min(1 + self.u, upper + adjustment))
             self.randomization_ranges[key] = (new_lower, new_upper)
         
     
@@ -66,13 +67,13 @@ class AutoDR:
 
     def _custom_randomize(self):
         mass_range = self.randomization_ranges['mass']
-        friction_range = self.randomization_ranges['friction']
+        # friction_range = self.randomization_ranges['friction']
 
         mass_multipliers = np.random.uniform(*mass_range, size=self.env.model.body_mass.shape)
         self.env.model.body_mass[:] = self.env.original_masses * mass_multipliers
 
-        friction_multipliers = np.random.uniform(*friction_range, size=self.env.model.geom_friction.shape)
-        self.env.model.geom_friction[:] = self.env.original_frictions * friction_multipliers
+        # friction_multipliers = np.random.uniform(*friction_range, size=self.env.model.geom_friction.shape)
+        # self.env.model.geom_friction[:] = self.env.original_frictions * friction_multipliers
 
 
 def main(args):
@@ -88,14 +89,18 @@ def main(args):
     gamma = 0.995
     tau = 0.01
     ent_coef = "auto"
+    u = 0.5
+    threshold = 1000
+    call_back_freq = args.callback_freq
+    adaptation_rate = 0.005
 
-    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
+    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u) + "_threshold_" + str(threshold) + "_callback_freq_" + str(call_back_freq) + "_adaptation_rate_" + str(adaptation_rate)
 
     dir_name = "AutoDR/" + name + "/"
     
     # Initialize AutoDR
     # Adjust the threshold as needed
-    auto_dr = AutoDR(train_env, performance_threshold = 800, adaptation_rate=0.05)  
+    auto_dr = AutoDR(train_env, performance_threshold = threshold, adaptation_rate = adaptation_rate)  
 
     model = SAC("MlpPolicy", auto_dr.get_randomized_env(), learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
 
