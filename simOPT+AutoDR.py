@@ -128,7 +128,10 @@ class SimOptAutoDR:
         self.env.set_param_ranges(new_ranges)
 
 # STEP 3 
-"Now, let's modify the training loop to use this combined approach:
+""" 
+Now, let's modify the training loop to use this combined approach:
+"""
+
 from stable_baselines3 import SAC
 from stable_baselines3.common.evaluation import evaluate_policy
 

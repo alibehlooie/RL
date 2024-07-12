@@ -27,8 +27,8 @@ class AutoDR:
         self.adaptation_rate = adaptation_rate
         self.u = u
         self.randomization_ranges = {
-            'mass': (1, 1)
-            # 'friction': (1, 1)
+            'mass': (1, 1),
+            'friction': (1, 1)
         }
 
     def update_ranges(self, performance):
@@ -67,13 +67,13 @@ class AutoDR:
 
     def _custom_randomize(self):
         mass_range = self.randomization_ranges['mass']
-        # friction_range = self.randomization_ranges['friction']
+        friction_range = self.randomization_ranges['friction']
 
         mass_multipliers = np.random.uniform(*mass_range, size=self.env.model.body_mass.shape)
         self.env.model.body_mass[:] = self.env.original_masses * mass_multipliers
 
-        # friction_multipliers = np.random.uniform(*friction_range, size=self.env.model.geom_friction.shape)
-        # self.env.model.geom_friction[:] = self.env.original_frictions * friction_multipliers
+        friction_multipliers = np.random.uniform(*friction_range, size=self.env.model.geom_friction.shape)
+        self.env.model.geom_friction[:] = self.env.original_frictions * friction_multipliers
 
 
 def main(args):
@@ -101,6 +101,10 @@ def main(args):
     # Initialize AutoDR
     # Adjust the threshold as needed
     auto_dr = AutoDR(train_env, performance_threshold = threshold, adaptation_rate = adaptation_rate)  
+
+    if("friction" in auto_dr.randomization_ranges):
+        name = name + "_friction_"
+        dir_name = "AutoDR/" + name + "/"
 
     model = SAC("MlpPolicy", auto_dr.get_randomized_env(), learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
 

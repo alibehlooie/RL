@@ -1,9 +1,17 @@
 
-"Implement a parameterized Hopper environment:"
+"""Implement a parameterized Hopper environment:"""
 import numpy as np
-from gym.envs.mujoco import HopperEnv
+#from gym.envs.mujoco import HopperEnv
+from env.custom_hopper import *
+import matplotlib.pyplot as plt
+import gym  
+from stable_baselines3.common.evaluation import evaluate_policy
+from stable_baselines3.common.callbacks import EvalCallback, StopTrainingOnRewardThreshold
+from stable_baselines3.common.vec_env import DummyVecEnv
 
-class ParameterizedHopperEnv(HopperEnv):
+
+
+class ParameterizedHopperEnv(CustomHopper):
     def __init__(self, randomize_params=True):
         super().__init__()
         self.randomize_params = randomize_params
@@ -39,7 +47,7 @@ class ParameterizedHopperEnv(HopperEnv):
         self._apply_parameters()
 
 
-"2.Implement SimOpt:"
+"""2.Implement SimOpt:"""
 import numpy as np
 from scipy.stats import truncnorm
 
@@ -112,28 +120,49 @@ class SimOpt:
             std = np.std(values)
             self.param_ranges[key] = (max(0, mean - 2*std), mean + 2*std)
 
-      "3. Modify your training loop to incorporate SimOpt:"
+"""3. Modify your training loop to incorporate SimOpt:"""
 from stable_baselines3 import SAC
 from stable_baselines3.common.evaluation import evaluate_policy
 
+hyperparameters = {
+         "learning_rate": [1e-3],
+         "gamma": [0.995],
+         "tau" : [ 0.01],
+         "ent_coef" : ["auto"],
+         "rand_u" : [ 0.5]
+    }
+
 # Create the parameterized Hopper environment
+reward_pic = "AdoptiveDR_results/"  + "pic.png"
 env = ParameterizedHopperEnv()
+eval_env = gym.make("CustomHopper-source-v0")
+eval_env = DummyVecEnv([lambda: eval_env])
+eval_callback = EvalCallback(
+    eval_env,
+    n_eval_episodes=10,   # Number of episodes to evaluate 
+    eval_freq=1000,       # Evaluate every 1000 steps 
+    log_path= "AdoptiveDR_results/",   # Where to log results (if desired)
+    best_model_save_path= "AdoptiveDR_results/", # Where to save the best model (if desired)
+    # deterministic=False  # Use deterministic actions for evaluation
+    )
 
 # Initialize the SAC model
-model = SAC("MlpPolicy", env, verbose=1)
+model = SAC("MlpPolicy", env, verbose=1 , 
+        learning_rate=hyperparameters["learning_rate"][0], gamma=hyperparameters["gamma"][0], 
+        tau=hyperparameters["tau"][0], ent_coef=hyperparameters["ent_coef"][0])
 
 # Initialize SimOpt
 sim_opt = SimOpt(env)
 
 # Training loop
-total_timesteps = 1000000
-sim_opt_interval = 50000
+total_timesteps = 100000
+sim_opt_interval = 5000
 timesteps = 0
 
 while timesteps < total_timesteps:
     # Train for a bit
-    model.learn(total_timesteps=sim_opt_interval, reset_num_timesteps=False)
-    timesteps += sim_opt_interval
+    model.learn(total_timesteps=sim_opt_interval, callback = eval_callback, reset_num_timesteps=False, progress_bar= True)
+ 
 
     # Evaluate in the current simulated environment
     mean_reward_sim, _ = evaluate_policy(model, model.get_env(), n_eval_episodes=10)
@@ -151,10 +180,22 @@ while timesteps < total_timesteps:
     env.set_parameters(best_params)
 
 # Save the final model
-model.save("sac_hopper_simopt")
+model.save("AdaptiveDR_results/sac_hopper_simopt")
+eval_results = np.load("AdoptiveDR_results/" + 'evaluations.npz') 
+rewards = eval_results['results'][:, 0]  
+lengths = eval_results['results'][:, 1]
+timesteps = eval_results['timesteps']   
 
 
-"4.Evaluation and Analysis:After training, evaluate your model in various conditions:"
+plt.figure(figsize=(10, 6))
+plt.plot(timesteps, rewards)
+plt.xlabel('Timesteps')
+plt.ylabel('Mean Reward')
+plt.title("reward_pic")
+plt.savefig(reward_pic)
+timesteps += sim_opt_interval
+
+"""4.Evaluation and Analysis:After training, evaluate your model in various conditions:"""
 # Evaluate in optimized simulation environment
 env.set_parameters(best_params)
 mean_reward_opt, std_reward_opt = evaluate_policy(model, env, n_eval_episodes=100)

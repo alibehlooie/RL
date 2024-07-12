@@ -15,6 +15,7 @@ def parse_args():
     parser.add_argument('--n-episodes', default=50000, type=int, help='Number of training episodes')
     parser.add_argument('--print-every', default=20000, type=int, help='Print info every <> episodes')
     parser.add_argument('--device', default='cpu', type=str, help='network device [cpu, cuda]')
+    parser.add_argument('--save', default="model.mdl", type=str, help='Save model as ...')
 
     return parser.parse_args()
 
@@ -65,7 +66,10 @@ def main():
 			print('Episode return:', train_reward)
 
 		agent.update_policy()
-	torch.save(agent.policy.state_dict(), "model.mdl")
+	
+	# Save the model
+	print(f"save the model to {args.save}")
+	torch.save(agent.policy.state_dict(), args.save)
 
 	
 

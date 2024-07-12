@@ -34,65 +34,19 @@ def parse_args():
     return parser.parse_args()
 
 
-def RandomizedEnv(env, u = 1):
-    r = np.random.uniform(low = -u, high = u, size = 3)
-    env.sim.model.body_mass[1] = env.sim.model.body_mass[1] + r[0]
-    env.sim.model.body_mass[2] = env.sim.model.body_mass[2] + r[1]
-    env.sim.model.body_mass[3] = env.sim.model.body_mass[3] + r[2]
-    return env
-
-class DomainRandomizationCallback(BaseCallback):
-    def __init__(self, u = 0.5, verbose=0):
-        self.u = u
-        super().__init__(verbose)   
-    
-    def _on_training_start(self) -> None:
-        self.init_env = copy(self.training_env.envs[0].unwrapped)
-        self.episode_counter = 0
-        self.step_counter = 0
-    
-    def _on_step(self) -> bool:
-        # print("On step")
-        self.step_counter += 1
-
-        # at the end of the episode
-        if self.locals['dones'][0]:
-            self.episode_counter += 1
-            env = self.locals["env"].envs[0]
-            env.model.body_mass[2] = self.init_env.model.body_mass[2] * np.random.uniform(1 - self.u, 1 + self.u)
-            env.model.body_mass[3] = self.init_env.model.body_mass[3] * np.random.uniform(1 - self.u, 1 + self.u)
-            env.model.body_mass[4] = self.init_env.model.body_mass[4] * np.random.uniform(1 - self.u, 1 + self.u)
-            print(f"Episode {self.episode_counter} had {self.step_counter} steps -> Randomize env: ", env.model.body_mass)
-            self.step_counter = 0
-
-        return True
-
-    def _on_training_end(self) -> None:
-        print(f"Training end for {self.episode_counter} episodes")
-        print(f"finally masses are: ", self.training_env.envs[0].unwrapped.model.body_mass)
-        pass
-
-randomize_callback = DomainRandomizationCallback(u=0.5)
-
-randomize_callback = DomainRandomizationCallback()
-
-
-
 def main(args):
     # Create a hyperparameter-grid-search
     hyperparameters = {
-         "learning_rate": [1e-3],
-         "gamma": [0.995],
-         "tau" : [ 0.01],
-         "ent_coef" : ["auto"],
-         "rand_u" : [1, 0.5, 0.2]
+         "learning_rate": [0.0003],
+         "gamma": [0.99],
+         "tau" : [0.005],
+         "ent_coef" : ["auto"]
     }
     
     for lr in hyperparameters["learning_rate"]:
         for gamma in hyperparameters["gamma"]:
             for tau in hyperparameters["tau"]:
                 for ent_coef in hyperparameters["ent_coef"]:
-                    for u in hyperparameters["rand_u"]:
                     
                         if(args.env == 'source'):
                             train_env = gym.make('CustomHopper-source-v0')
@@ -103,10 +57,10 @@ def main(args):
                     
                         eval_env = DummyVecEnv([lambda: eval_env])
                     
-                        # Randomize the environment
-                        train_env = RandomizedEnv(train_env, u = u)
+                        name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef)
+                        if(args.env == "target"):
+                            name = name + "_target"
 
-                        name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u)
                         print("Training " + name)
                     
                         dir_name = "SAC-hyper-eval_callback/" + name + "/"
@@ -126,9 +80,7 @@ def main(args):
                             deterministic=True    # Use deterministic actions for evaluation
                             )
                         
-                        randomize_callback = DomainRandomizationCallback(u = u)
-
-                        callback = CallbackList([randomize_callback, eval_callback])
+                        callback = CallbackList([eval_callback])
 
                         model = SAC("MlpPolicy", train_env, learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
                         model.learn(total_timesteps=args.n_steps, callback=callback, progress_bar= True)

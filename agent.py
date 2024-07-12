@@ -119,7 +119,7 @@ class Agent(object):
 
         discount_returns = (discount_returns - discount_returns.mean()) / (discount_returns.std() + 1e-8)   
 
-               # Baseline (fixed at 20)
+        # Baseline (fixed at 20)
         baseline = torch.full_like(discount_returns, 20.0).to(self.train_device) 
 
         # Compute advantage (discounted returns - baseline)
