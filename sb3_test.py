@@ -39,6 +39,7 @@ def main(args):
         env = gym.make('CustomHopper-source-v0')
     elif(args.env == 'target'):
         env = gym.make('CustomHopper-target-v0')
+        print("Test on target environment")
     else :
         print('Invalid environment')
         return
@@ -75,7 +76,7 @@ def main(args):
         print(f"Episode {i} reward: {total_reward} in total {step_count} steps")
         rewards_list = np.append(rewards_list, total_reward)
 
-    title = "target" if "target" in args.model else "source" + "-" + args.env
+    title = args.env
     
     mean = np.mean(rewards_list)
     std = np.std(rewards_list)
