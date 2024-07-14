@@ -8,6 +8,7 @@ from stable_baselines3.common.callbacks import EvalCallback
 import argparse
 
 from copy import copy
+import os
 
 
 def parse_args():
@@ -28,7 +29,7 @@ class AutoDR:
         self.u = u
         self.randomization_ranges = {
             'mass': (1, 1),
-            'friction': (1, 1)
+            # 'friction': (1, 1)
         }
 
     def update_ranges(self, performance):
@@ -77,26 +78,23 @@ class AutoDR:
 
 
 def main(args):
-    total_timesteps = args.n_steps
-    eval_interval = 100
-    timesteps = 0
-
-    
     train_env = gym.make('CustomHopper-source-v0')
     eval_env = gym.make("CustomHopper-source-v0")
 
+    # hyperparameters
+    total_timesteps = args.n_steps
+    eval_interval = args.callback_freq
     lr = 1e-3
     gamma = 0.995
     tau = 0.01
     ent_coef = "auto"
     u = 0.5
     threshold = 1000
-    call_back_freq = args.callback_freq
     adaptation_rate = 0.005
 
-    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u) + "_threshold_" + str(threshold) + "_callback_freq_" + str(call_back_freq) + "_adaptation_rate_" + str(adaptation_rate)
+    name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u) + "_threshold_" + str(threshold) + "_callback_freq_" + str(eval_interval) + "_adaptation_rate_" + str(adaptation_rate)
 
-    dir_name = "AutoDR/" + name + "/"
+    dir_name = os.path.join("AutoDR", name)
     
     # Initialize AutoDR
     # Adjust the threshold as needed
@@ -110,6 +108,15 @@ def main(args):
 
     eval_results = []
 
+    # check if model has already been trained
+    if os.path.isfile(os.path.join(dir_name,  "model.zip")):
+        print("Model already exists, not training again")
+        return
+    
+    print("Training " + name)
+    
+
+    timesteps = 0 
     while timesteps < total_timesteps:
         # Train for a bit
         model.learn(total_timesteps=eval_interval, reset_num_timesteps=False)
