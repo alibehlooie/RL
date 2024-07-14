@@ -30,6 +30,7 @@ def parse_args():
     parser.add_argument('--render', default=True, action='store_true', help='Render the simulator')
     parser.add_argument('--no-render', dest='render', action='store_false', help='Do not render the simulator')
     parser.add_argument('--env', default='source', type=str, help='source or target env')
+    parser.add_argument("--seed", default=1234, type=int, help="Random seed")
 
     return parser.parse_args()
 
@@ -58,6 +59,7 @@ def main(args):
 
     for i in range(n_episodes):
         done = False
+        env.seed(args.seed + i)
         state = env.reset()
         total_reward = 0
         step_count = 0
