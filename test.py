@@ -5,7 +5,7 @@ import torch
 import gym
 
 from env.custom_hopper import *
-from agent import Agent, Policy
+from agent_reinforce import Agent, Policy
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -36,6 +36,8 @@ def main():
 
 	agent = Agent(policy, device=args.device)
 
+	reward_list = []
+
 	for episode in range(args.episodes):
 		done = False
 		test_reward = 0
@@ -52,8 +54,12 @@ def main():
 
 			test_reward += reward
 			# env.render()
+		reward_list.append(test_reward)
 		print(f"Episode: {episode} | Return: {test_reward}")
 	
+
+	print(f"Average return: {np.mean(reward_list)}, std: {np.std(reward_list)}")
+
 
 if __name__ == '__main__':
 	main()
