@@ -26,10 +26,8 @@ from copy import copy, deepcopy
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-steps', default=100000, type=int, help='Number of training steps')
-    parser.add_argument('--save', default="models/model_test", type=str, help='Save model as ...')
     parser.add_argument('--callback-freq', default=100, type=int, help='Callback frequency')
     parser.add_argument('--verbose', default=1, type=int, help='Verbosity level for training')
-    parser.add_argument('--env', default='source', type=str, help='source or target env')
 
     return parser.parse_args()
 
@@ -72,11 +70,6 @@ class DomainRandomizationCallback(BaseCallback):
         print(f"finally masses are: ", self.training_env.envs[0].unwrapped.model.body_mass)
         pass
 
-randomize_callback = DomainRandomizationCallback(u=0.5)
-
-randomize_callback = DomainRandomizationCallback()
-
-
 
 def main(args):
     # Create a hyperparameter-grid-search
@@ -94,12 +87,9 @@ def main(args):
                 for ent_coef in hyperparameters["ent_coef"]:
                     for u in hyperparameters["rand_u"]:
                     
-                        if(args.env == 'source'):
-                            train_env = gym.make('CustomHopper-source-v0')
-                            eval_env = gym.make("CustomHopper-source-v0")
-                        elif(args.env == 'target'):
-                            train_env = gym.make('CustomHopper-target-v0')
-                            eval_env = gym.make("CustomHopper-target-v0")
+
+                        train_env = gym.make('CustomHopper-source-v0')
+                        eval_env = gym.make("CustomHopper-source-v0")
                     
                         eval_env = DummyVecEnv([lambda: eval_env])
                     
@@ -107,8 +97,6 @@ def main(args):
                         train_env = RandomizedEnv(train_env, u = u)
 
                         name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u)
-                        if(args.env == "target"):
-                            name = name + "_target"
                             
                         print("Training " + name)
                     
