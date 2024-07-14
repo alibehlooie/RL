@@ -102,64 +102,41 @@ class Agent(object):
         next_states = torch.stack(self.next_states, dim=0).to(self.train_device).squeeze(-1)
         rewards = torch.stack(self.rewards, dim=0).to(self.train_device).squeeze(-1)
         done = torch.Tensor(self.done).to(self.train_device)
-
+        
         self.states, self.next_states, self.action_log_probs, self.rewards, self.done = [], [], [], [], []
-        self.values, self.next_values, self.target_values = [], [], []
+        self.values, self.next_values, self.target_values = [], [], [] 
+        #
+        # TASK 2:
+        #   - compute discounted returns
 
-        # TASK 2: Compute discounted returns
-        discount_returns = []
-        returns_so_far = 0
-        for reward, is_done in zip(reversed(rewards), reversed(done)):
-            if is_done:
-                returns_so_far = 0
-            returns_so_far = reward + self.gamma * returns_so_far
-            discount_returns.insert(0, returns_so_far)
-        discount_returns = torch.Tensor(discount_returns).to(self.train_device)
-
-        discount_returns = (discount_returns - discount_returns.mean()) / (discount_returns.std() + 1e-8)
-
-        # Compute value estimates
-        values, _ = self.policy(states)
+    
+        #
+        # TASK 3:
+        # compute boostrapped discounted return estimates
+        _,values = self.policy(states)
         values = values.squeeze(-1)
-        next_values, _ = self.policy(next_states)
-        next_values = next_values.squeeze(-1) * (1 - done)
-
-        # Compute target values
+        _,next_values = self.policy(next_states)
+        next_values = next_values.squeeze(-1) * (1-done)
         target_values = rewards + self.gamma * next_values.detach()
+     
 
-        # Compute advantage (discounted returns - value estimates)
-        advantage = discount_returns - values
+        
 
-        # Compute policy gradient loss function given actions and returns
-        policy_loss = -(advantage * action_log_probs).mean()
-
-        # Compute gradients and step the optimizer for policy
-        self.optimizer.zero_grad()
-        policy_loss.backward()
-        self.optimizer.step()
-
-        # TASK 3: Compute bootstrapped discounted return estimates
-        _, values = self.policy(states)
-        values = values.squeeze(-1)
-        _, next_values = self.policy(next_states)
-        next_values = next_values.squeeze(-1) * (1 - done)
-        target_values = rewards + self.gamma * next_values.detach()
-
-        # Compute advantage terms
+        #   - compute advantage terms
         advantage = target_values - values
-
-        # Compute actor loss and critic loss
-        actor_loss = -(advantage.detach() * action_log_probs).mean()
-        critic_loss = F.mse_loss(values, target_values.detach())
-        loss = actor_loss + critic_loss
-
-        # Compute gradients and step the optimizer
+        #   - compute actor loss and critic loss
+        Actor_loss = -(advantage * action_log_probs).mean()
+        Critic_loss = F.mse_loss(values, target_values.detach())
+        loss = Actor_loss + Critic_loss
+        #   - compute gradients and step the optimizer
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
+    
+    
+        return        
 
-        return
-       
+
     def get_action(self, state, evaluation=False):
         """ state -> action (3-d), action_log_densities """
         x = torch.from_numpy(state).float().to(self.train_device)
