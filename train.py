@@ -9,11 +9,12 @@ import gym
 from env.custom_hopper import *
 from agent_reinforce import Agent, Policy
 from tqdm import tqdm
+import os
 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--n-episodes', default=50000, type=int, help='Number of training episodes')
-    parser.add_argument('--print-every', default=20000, type=int, help='Print info every <> episodes')
+    parser.add_argument('--print-every', default=1000, type=int, help='Print info every <> episodes')
     parser.add_argument('--device', default='cpu', type=str, help='network device [cpu, cuda]')
     parser.add_argument('--save', default="model.mdl", type=str, help='Save model as ...')
 
@@ -45,7 +46,11 @@ def main():
     # TASK 2 and 3: interleave data collection to policy updates
     #
 
+	reward_list = []
+
+	# without tqdm to run faster
 	for episode in tqdm(range(args.n_episodes), desc='Training'):
+	# for episode in range(args.n_episodes):
 		done = False
 		train_reward = 0
 		state = env.reset()  # Reset the environment and observe the initial state
@@ -64,12 +69,21 @@ def main():
 		if (episode+1)%args.print_every == 0:
 			print('Training episode:', episode)
 			print('Episode return:', train_reward)
+			reward_list.append(train_reward)
 
 		agent.update_policy()
 	
+	dirname = args.save
+	# make directory if it does not exist
+	if not os.path.exists(dirname):
+		os.makedirs(dirname)
+	model_file = os.path.join(dirname, 'model.mdl')
 	# Save the model
-	print(f"save the model to {args.save}")
-	torch.save(agent.policy.state_dict(), args.save)
+	print(f"save the model to {model_file}")
+	torch.save(agent.policy.state_dict(), model_file)
+	# Save the reward list
+	print(f"save the reward list to {os.path.join(dirname, 'reward_list.npy')}")
+	np.save(os.path.join(dirname, 'reward_list.npy'), np.array(reward_list))
 
 	
 
