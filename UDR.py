@@ -32,13 +32,6 @@ def parse_args():
     return parser.parse_args()
 
 
-def RandomizedEnv(env, u = 1):
-    r = np.random.uniform(low = -u, high = u, size = 3)
-    env.sim.model.body_mass[1] = env.sim.model.body_mass[1] + r[0]
-    env.sim.model.body_mass[2] = env.sim.model.body_mass[2] + r[1]
-    env.sim.model.body_mass[3] = env.sim.model.body_mass[3] + r[2]
-    return env
-
 class DomainRandomizationCallback(BaseCallback):
     def __init__(self, u = 0.5, verbose=0):
         self.u = u
@@ -92,9 +85,6 @@ def main(args):
                         eval_env = gym.make("CustomHopper-source-v0")
                     
                         eval_env = DummyVecEnv([lambda: eval_env])
-                    
-                        # Randomize the environment
-                        train_env = RandomizedEnv(train_env, u = u)
 
                         name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u)
                             
