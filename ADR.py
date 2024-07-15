@@ -20,7 +20,7 @@ def parse_args():
 
     return parser.parse_args()
 
-class AutoDR:
+class ADR:
     def __init__(self, env, performance_threshold, adaptation_rate=0.1, u = 0.5):
         self.init_env = copy(env.unwrapped)
         self.env = env
@@ -94,14 +94,14 @@ def main(args):
 
     name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u) + "_threshold_" + str(threshold) + "_callback_freq_" + str(eval_interval) + "_adaptation_rate_" + str(adaptation_rate)
     
-    # Initialize AutoDR
+    # Initialize ADR
     # Adjust the threshold as needed
-    auto_dr = AutoDR(train_env, performance_threshold = threshold, adaptation_rate = adaptation_rate)  
+    auto_dr = ADR(train_env, performance_threshold = threshold, adaptation_rate = adaptation_rate)  
 
     if("friction" in auto_dr.randomization_ranges):
         name = name + "_friction_"
 
-    dir_name = os.path.join("AutoDR", name)
+    dir_name = os.path.join("ADR", name)
 
     model = SAC("MlpPolicy", auto_dr.get_randomized_env(), learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
 
@@ -126,7 +126,7 @@ def main(args):
         print(f"Timesteps: {timesteps}, Mean reward: {mean_reward:.2f}")
         eval_results.append(mean_reward)
 
-        # Update AutoDR ranges
+        # Update ADR ranges
         auto_dr.update_ranges(mean_reward)
 
     # Save the final model
