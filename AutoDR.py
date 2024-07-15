@@ -93,8 +93,6 @@ def main(args):
     adaptation_rate = 0.005
 
     name = "SAC" + "_steps_" + str(args.n_steps) + "_lr_" + str(lr) + "_gamma_" + str(gamma) + "_tau_" + str(tau) + "_ent_coef_" + str(ent_coef) + "_u_" + str(u) + "_threshold_" + str(threshold) + "_callback_freq_" + str(eval_interval) + "_adaptation_rate_" + str(adaptation_rate)
-
-    dir_name = os.path.join("AutoDR", name)
     
     # Initialize AutoDR
     # Adjust the threshold as needed
@@ -102,14 +100,15 @@ def main(args):
 
     if("friction" in auto_dr.randomization_ranges):
         name = name + "_friction_"
-        dir_name = "AutoDR/" + name + "/"
+
+    dir_name = os.path.join("AutoDR", name)
 
     model = SAC("MlpPolicy", auto_dr.get_randomized_env(), learning_rate=lr, gamma=gamma, tau=tau, ent_coef=ent_coef, verbose = args.verbose-1)
 
     eval_results = []
 
     # check if model has already been trained
-    if os.path.isfile(os.path.join(dir_name,  "model.zip")):
+    if os.path.isfile(os.path.join(dir_name, "model.zip")):
         print("Model already exists, not training again")
         return
     
@@ -131,10 +130,10 @@ def main(args):
         auto_dr.update_ranges(mean_reward)
 
     # Save the final model
-    model.save(dir_name + "model.zip")
+    model.save(os.path.join(dir_name, "model.zip"))
 
     # save the evaluation results
-    np.save(dir_name + "eval_results.npy", eval_results)
+    np.save(os.path.join(dir_name, "eval_results.npy"), eval_results)
 
 if __name__ == "__main__":
     args = parse_args()
