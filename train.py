@@ -7,7 +7,7 @@ import torch
 import gym
 
 from env.custom_hopper import *
-from agent_reinforce import Agent, Policy
+from agent_actor_critic import Agent, Policy
 from tqdm import tqdm
 import os
 
@@ -49,8 +49,8 @@ def main():
 	reward_list = []
 
 	# without tqdm to run faster
-	for episode in tqdm(range(args.n_episodes), desc='Training'):
-	# for episode in range(args.n_episodes):
+	# for episode in tqdm(range(args.n_episodes), desc='Training'):
+	for episode in range(args.n_episodes):
 		done = False
 		train_reward = 0
 		state = env.reset()  # Reset the environment and observe the initial state

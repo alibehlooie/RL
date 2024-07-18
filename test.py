@@ -5,7 +5,7 @@ import torch
 import gym
 
 from env.custom_hopper import *
-from agent_reinforce import Agent, Policy
+from agent_actor_critic import Agent, Policy
 
 def parse_args():
     parser = argparse.ArgumentParser()

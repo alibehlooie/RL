@@ -37,7 +37,7 @@ def parse_args():
 def main(args):
     # Create a hyperparameter-grid-search
     hyperparameters = {
-         "learning_rate": [0.0003],
+         "learning_rate": [0.0001],
          "gamma": [0.99],
          "tau" : [0.005],
          "ent_coef" : ["auto"]
