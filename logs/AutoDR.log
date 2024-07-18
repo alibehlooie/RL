@@ -1,0 +1,1890 @@
+nohup: ignoring input
+Timesteps: 100, Mean reward: 29.58
+Timesteps: 200, Mean reward: 101.65
+Timesteps: 300, Mean reward: 206.52
+Timesteps: 400, Mean reward: 83.53
+Timesteps: 500, Mean reward: 68.82
+Timesteps: 600, Mean reward: 53.88
+Timesteps: 700, Mean reward: 84.70
+Timesteps: 800, Mean reward: 201.79
+Timesteps: 900, Mean reward: 94.93
+Timesteps: 1000, Mean reward: 66.90
+Timesteps: 1100, Mean reward: 188.68
+Timesteps: 1200, Mean reward: 197.30
+Timesteps: 1300, Mean reward: 194.05
+Timesteps: 1400, Mean reward: 207.78
+Timesteps: 1500, Mean reward: 211.61
+Timesteps: 1600, Mean reward: 216.42
+Timesteps: 1700, Mean reward: 61.68
+Timesteps: 1800, Mean reward: 208.95
+Timesteps: 1900, Mean reward: 202.57
+Timesteps: 2000, Mean reward: 153.46
+Timesteps: 2100, Mean reward: 207.80
+Timesteps: 2200, Mean reward: 206.54
+Timesteps: 2300, Mean reward: 206.92
+Timesteps: 2400, Mean reward: 199.62
+Timesteps: 2500, Mean reward: 204.36
+Timesteps: 2600, Mean reward: 180.33
+Timesteps: 2700, Mean reward: 202.57
+Timesteps: 2800, Mean reward: 141.78
+Timesteps: 2900, Mean reward: 224.40
+Timesteps: 3000, Mean reward: 223.09
+Timesteps: 3100, Mean reward: 228.99
+Timesteps: 3200, Mean reward: 223.92
+Timesteps: 3300, Mean reward: 215.88
+Timesteps: 3400, Mean reward: 224.40
+Timesteps: 3500, Mean reward: 235.13
+Timesteps: 3600, Mean reward: 205.09
+Timesteps: 3700, Mean reward: 192.65
+Timesteps: 3800, Mean reward: 195.23
+Timesteps: 3900, Mean reward: 194.39
+Timesteps: 4000, Mean reward: 198.33
+Timesteps: 4100, Mean reward: 198.53
+Timesteps: 4200, Mean reward: 204.22
+Timesteps: 4300, Mean reward: 203.84
+Timesteps: 4400, Mean reward: 205.49
+Timesteps: 4500, Mean reward: 206.82
+Timesteps: 4600, Mean reward: 214.56
+Timesteps: 4700, Mean reward: 212.98
+Timesteps: 4800, Mean reward: 211.49
+Timesteps: 4900, Mean reward: 220.80
+Timesteps: 5000, Mean reward: 212.86
+Timesteps: 5100, Mean reward: 215.28
+Timesteps: 5200, Mean reward: 222.14
+Timesteps: 5300, Mean reward: 220.30
+Timesteps: 5400, Mean reward: 186.64
+Timesteps: 5500, Mean reward: 175.72
+Timesteps: 5600, Mean reward: 207.06
+Timesteps: 5700, Mean reward: 67.59
+Timesteps: 5800, Mean reward: 31.87
+Timesteps: 5900, Mean reward: 127.51
+Timesteps: 6000, Mean reward: 45.91
+Timesteps: 6100, Mean reward: 480.10
+Timesteps: 6200, Mean reward: 520.23
+Timesteps: 6300, Mean reward: 528.49
+Timesteps: 6400, Mean reward: 511.80
+Timesteps: 6500, Mean reward: 508.42
+Timesteps: 6600, Mean reward: 503.99
+Timesteps: 6700, Mean reward: 534.10
+Timesteps: 6800, Mean reward: 541.28
+Timesteps: 6900, Mean reward: 375.18
+Timesteps: 7000, Mean reward: 113.04
+Timesteps: 7100, Mean reward: 31.85
+Timesteps: 7200, Mean reward: 253.83
+Timesteps: 7300, Mean reward: 216.49
+Timesteps: 7400, Mean reward: 215.60
+Timesteps: 7500, Mean reward: 212.32
+Timesteps: 7600, Mean reward: 216.53
+Timesteps: 7700, Mean reward: 208.24
+Timesteps: 7800, Mean reward: 221.66
+Timesteps: 7900, Mean reward: 208.37
+Timesteps: 8000, Mean reward: 225.45
+Timesteps: 8100, Mean reward: 95.21
+Timesteps: 8200, Mean reward: 230.65
+Timesteps: 8300, Mean reward: 225.15
+Timesteps: 8400, Mean reward: 169.40
+Timesteps: 8500, Mean reward: 226.38
+Timesteps: 8600, Mean reward: 234.82
+Timesteps: 8700, Mean reward: 234.68
+Timesteps: 8800, Mean reward: 236.98
+Timesteps: 8900, Mean reward: 217.72
+Timesteps: 9000, Mean reward: 192.97
+Timesteps: 9100, Mean reward: 196.69
+Timesteps: 9200, Mean reward: 165.33
+Timesteps: 9300, Mean reward: 199.03
+Timesteps: 9400, Mean reward: 223.79
+Timesteps: 9500, Mean reward: 197.00
+Timesteps: 9600, Mean reward: 39.55
+Timesteps: 9700, Mean reward: 230.88
+Timesteps: 9800, Mean reward: 215.79
+Timesteps: 9900, Mean reward: 216.82
+Timesteps: 10000, Mean reward: 210.12
+Timesteps: 10100, Mean reward: 231.05
+Timesteps: 10200, Mean reward: 234.12
+Timesteps: 10300, Mean reward: 238.42
+Timesteps: 10400, Mean reward: 247.99
+Timesteps: 10500, Mean reward: 250.61
+Timesteps: 10600, Mean reward: 245.88
+Timesteps: 10700, Mean reward: 246.52
+Timesteps: 10800, Mean reward: 274.11
+Timesteps: 10900, Mean reward: 264.50
+Timesteps: 11000, Mean reward: 251.73
+Timesteps: 11100, Mean reward: 256.57
+Timesteps: 11200, Mean reward: 250.48
+Timesteps: 11300, Mean reward: 268.51
+Timesteps: 11400, Mean reward: 204.36
+Timesteps: 11500, Mean reward: 214.89
+Timesteps: 11600, Mean reward: 286.56
+Timesteps: 11700, Mean reward: 201.28
+Timesteps: 11800, Mean reward: 289.91
+Timesteps: 11900, Mean reward: 6.45
+Timesteps: 12000, Mean reward: 267.28
+Timesteps: 12100, Mean reward: 56.14
+Timesteps: 12200, Mean reward: 172.31
+Timesteps: 12300, Mean reward: 300.94
+Timesteps: 12400, Mean reward: 369.12
+Timesteps: 12500, Mean reward: 167.11
+Timesteps: 12600, Mean reward: 316.44
+Timesteps: 12700, Mean reward: 429.37
+Timesteps: 12800, Mean reward: 482.97
+Timesteps: 12900, Mean reward: 247.33
+Timesteps: 13000, Mean reward: 503.31
+Timesteps: 13100, Mean reward: 495.70
+Timesteps: 13200, Mean reward: 494.44
+Timesteps: 13300, Mean reward: 495.02
+Timesteps: 13400, Mean reward: 487.29
+Timesteps: 13500, Mean reward: 486.07
+Timesteps: 13600, Mean reward: 217.41
+Timesteps: 13700, Mean reward: 306.37
+Timesteps: 13800, Mean reward: 341.80
+Timesteps: 13900, Mean reward: 484.59
+Timesteps: 14000, Mean reward: 491.02
+Timesteps: 14100, Mean reward: 270.49
+Timesteps: 14200, Mean reward: 338.16
+Timesteps: 14300, Mean reward: 494.91
+Timesteps: 14400, Mean reward: 495.67
+Timesteps: 14500, Mean reward: 63.77
+Timesteps: 14600, Mean reward: 492.77
+Timesteps: 14700, Mean reward: 494.08
+Timesteps: 14800, Mean reward: 491.91
+Timesteps: 14900, Mean reward: 493.02
+Timesteps: 15000, Mean reward: 501.34
+Timesteps: 15100, Mean reward: 493.51
+Timesteps: 15200, Mean reward: 499.41
+Timesteps: 15300, Mean reward: 497.13
+Timesteps: 15400, Mean reward: 496.10
+Timesteps: 15500, Mean reward: 494.70
+Timesteps: 15600, Mean reward: 507.14
+Timesteps: 15700, Mean reward: 502.16
+Timesteps: 15800, Mean reward: 504.43
+Timesteps: 15900, Mean reward: 504.41
+Timesteps: 16000, Mean reward: 539.74
+Timesteps: 16100, Mean reward: 551.15
+Timesteps: 16200, Mean reward: 540.34
+Timesteps: 16300, Mean reward: 519.37
+Timesteps: 16400, Mean reward: 537.82
+Timesteps: 16500, Mean reward: 515.57
+Timesteps: 16600, Mean reward: 512.58
+Timesteps: 16700, Mean reward: 514.51
+Timesteps: 16800, Mean reward: 512.02
+Timesteps: 16900, Mean reward: 280.52
+Timesteps: 17000, Mean reward: 479.31
+Timesteps: 17100, Mean reward: 482.33
+Timesteps: 17200, Mean reward: 436.67
+Timesteps: 17300, Mean reward: 403.95
+Timesteps: 17400, Mean reward: 379.68
+Timesteps: 17500, Mean reward: 470.72
+Timesteps: 17600, Mean reward: 396.02
+Timesteps: 17700, Mean reward: 504.72
+Timesteps: 17800, Mean reward: 510.45
+Timesteps: 17900, Mean reward: 540.71
+Timesteps: 18000, Mean reward: 521.70
+Timesteps: 18100, Mean reward: 516.32
+Timesteps: 18200, Mean reward: 399.75
+Timesteps: 18300, Mean reward: 271.25
+Timesteps: 18400, Mean reward: 429.22
+Timesteps: 18500, Mean reward: 551.81
+Timesteps: 18600, Mean reward: 570.06
+Timesteps: 18700, Mean reward: 571.89
+Timesteps: 18800, Mean reward: 506.84
+Timesteps: 18900, Mean reward: 542.12
+Timesteps: 19000, Mean reward: 511.92
+Timesteps: 19100, Mean reward: 514.29
+Timesteps: 19200, Mean reward: 557.62
+Timesteps: 19300, Mean reward: 408.23
+Timesteps: 19400, Mean reward: 420.89
+Timesteps: 19500, Mean reward: 423.30
+Timesteps: 19600, Mean reward: 460.14
+Timesteps: 19700, Mean reward: 508.48
+Timesteps: 19800, Mean reward: 520.70
+Timesteps: 19900, Mean reward: 510.98
+Timesteps: 20000, Mean reward: 542.37
+Timesteps: 20100, Mean reward: 534.36
+Timesteps: 20200, Mean reward: 509.07
+Timesteps: 20300, Mean reward: 504.90
+Timesteps: 20400, Mean reward: 520.72
+Timesteps: 20500, Mean reward: 461.94
+Timesteps: 20600, Mean reward: 519.77
+Timesteps: 20700, Mean reward: 549.18
+Timesteps: 20800, Mean reward: 478.62
+Timesteps: 20900, Mean reward: 370.89
+Timesteps: 21000, Mean reward: 472.60
+Timesteps: 21100, Mean reward: 460.94
+Timesteps: 21200, Mean reward: 492.36
+Timesteps: 21300, Mean reward: 473.70
+Timesteps: 21400, Mean reward: 407.67
+Timesteps: 21500, Mean reward: 420.84
+Timesteps: 21600, Mean reward: 397.81
+Timesteps: 21700, Mean reward: 427.23
+Timesteps: 21800, Mean reward: 268.63
+Timesteps: 21900, Mean reward: 375.70
+Timesteps: 22000, Mean reward: 351.73
+Timesteps: 22100, Mean reward: 352.09
+Timesteps: 22200, Mean reward: 317.55
+Timesteps: 22300, Mean reward: 299.16
+Timesteps: 22400, Mean reward: 331.32
+Timesteps: 22500, Mean reward: 318.13
+Timesteps: 22600, Mean reward: 347.20
+Timesteps: 22700, Mean reward: 357.34
+Timesteps: 22800, Mean reward: 356.64
+Timesteps: 22900, Mean reward: 311.31
+Timesteps: 23000, Mean reward: 324.31
+Timesteps: 23100, Mean reward: 366.41
+Timesteps: 23200, Mean reward: 339.85
+Timesteps: 23300, Mean reward: 322.77
+Timesteps: 23400, Mean reward: 333.32
+Timesteps: 23500, Mean reward: 329.25
+Timesteps: 23600, Mean reward: 324.19
+Timesteps: 23700, Mean reward: 318.16
+Timesteps: 23800, Mean reward: 437.08
+Timesteps: 23900, Mean reward: 362.57
+Timesteps: 24000, Mean reward: 347.06
+Timesteps: 24100, Mean reward: 362.82
+Timesteps: 24200, Mean reward: 321.86
+Timesteps: 24300, Mean reward: 348.24
+Timesteps: 24400, Mean reward: 338.06
+Timesteps: 24500, Mean reward: 375.04
+Timesteps: 24600, Mean reward: 308.44
+Timesteps: 24700, Mean reward: 372.72
+Timesteps: 24800, Mean reward: 335.49
+Timesteps: 24900, Mean reward: 359.71
+Timesteps: 25000, Mean reward: 395.67
+Timesteps: 25100, Mean reward: 305.39
+Timesteps: 25200, Mean reward: 360.48
+Timesteps: 25300, Mean reward: 387.14
+Timesteps: 25400, Mean reward: 429.14
+Timesteps: 25500, Mean reward: 365.89
+Timesteps: 25600, Mean reward: 471.79
+Timesteps: 25700, Mean reward: 439.02
+Timesteps: 25800, Mean reward: 351.80
+Timesteps: 25900, Mean reward: 405.97
+Timesteps: 26000, Mean reward: 497.30
+Timesteps: 26100, Mean reward: 519.78
+Timesteps: 26200, Mean reward: 519.01
+Timesteps: 26300, Mean reward: 522.19
+Timesteps: 26400, Mean reward: 371.94
+Timesteps: 26500, Mean reward: 388.88
+Timesteps: 26600, Mean reward: 511.23
+Timesteps: 26700, Mean reward: 362.56
+Timesteps: 26800, Mean reward: 553.40
+Timesteps: 26900, Mean reward: 512.03
+Timesteps: 27000, Mean reward: 447.57
+Timesteps: 27100, Mean reward: 417.79
+Timesteps: 27200, Mean reward: 334.54
+Timesteps: 27300, Mean reward: 529.61
+Timesteps: 27400, Mean reward: 414.35
+Timesteps: 27500, Mean reward: 475.54
+Timesteps: 27600, Mean reward: 386.64
+Timesteps: 27700, Mean reward: 344.27
+Timesteps: 27800, Mean reward: 434.14
+Timesteps: 27900, Mean reward: 357.81
+Timesteps: 28000, Mean reward: 341.02
+Timesteps: 28100, Mean reward: 409.19
+Timesteps: 28200, Mean reward: 340.06
+Timesteps: 28300, Mean reward: 469.98
+Timesteps: 28400, Mean reward: 467.56
+Timesteps: 28500, Mean reward: 412.65
+Timesteps: 28600, Mean reward: 356.06
+Timesteps: 28700, Mean reward: 371.19
+Timesteps: 28800, Mean reward: 411.39
+Timesteps: 28900, Mean reward: 443.67
+Timesteps: 29000, Mean reward: 392.01
+Timesteps: 29100, Mean reward: 441.78
+Timesteps: 29200, Mean reward: 522.36
+Timesteps: 29300, Mean reward: 319.67
+Timesteps: 29400, Mean reward: 489.72
+Timesteps: 29500, Mean reward: 464.24
+Timesteps: 29600, Mean reward: 479.70
+Timesteps: 29700, Mean reward: 435.68
+Timesteps: 29800, Mean reward: 519.16
+Timesteps: 29900, Mean reward: 441.14
+Timesteps: 30000, Mean reward: 12.50
+Timesteps: 30100, Mean reward: 517.99
+Timesteps: 30200, Mean reward: 501.90
+Timesteps: 30300, Mean reward: 317.91
+Timesteps: 30400, Mean reward: 505.94
+Timesteps: 30500, Mean reward: 358.12
+Timesteps: 30600, Mean reward: 513.57
+Timesteps: 30700, Mean reward: 517.68
+Timesteps: 30800, Mean reward: 497.44
+Timesteps: 30900, Mean reward: 523.38
+Timesteps: 31000, Mean reward: 515.64
+Timesteps: 31100, Mean reward: 512.33
+Timesteps: 31200, Mean reward: 516.77
+Timesteps: 31300, Mean reward: 482.55
+Timesteps: 31400, Mean reward: 513.36
+Timesteps: 31500, Mean reward: 518.49
+Timesteps: 31600, Mean reward: 516.58
+Timesteps: 31700, Mean reward: 515.22
+Timesteps: 31800, Mean reward: 472.39
+Timesteps: 31900, Mean reward: 516.64
+Timesteps: 32000, Mean reward: 530.02
+Timesteps: 32100, Mean reward: 513.76
+Timesteps: 32200, Mean reward: 482.51
+Timesteps: 32300, Mean reward: 517.44
+Timesteps: 32400, Mean reward: 432.20
+Timesteps: 32500, Mean reward: 517.68
+Timesteps: 32600, Mean reward: 525.03
+Timesteps: 32700, Mean reward: 515.99
+Timesteps: 32800, Mean reward: 527.60
+Timesteps: 32900, Mean reward: 527.70
+Timesteps: 33000, Mean reward: 526.00
+Timesteps: 33100, Mean reward: 393.91
+Timesteps: 33200, Mean reward: 491.95
+Timesteps: 33300, Mean reward: 404.96
+Timesteps: 33400, Mean reward: 427.40
+Timesteps: 33500, Mean reward: 495.19
+Timesteps: 33600, Mean reward: 522.40
+Timesteps: 33700, Mean reward: 512.23
+Timesteps: 33800, Mean reward: 398.15
+Timesteps: 33900, Mean reward: 210.20
+Timesteps: 34000, Mean reward: 528.85
+Timesteps: 34100, Mean reward: 495.39
+Timesteps: 34200, Mean reward: 75.41
+Timesteps: 34300, Mean reward: 462.43
+Timesteps: 34400, Mean reward: 417.02
+Timesteps: 34500, Mean reward: 568.81
+Timesteps: 34600, Mean reward: 492.34
+Timesteps: 34700, Mean reward: 564.86
+Timesteps: 34800, Mean reward: 535.29
+Timesteps: 34900, Mean reward: 443.70
+Timesteps: 35000, Mean reward: 325.50
+Timesteps: 35100, Mean reward: 558.91
+Timesteps: 35200, Mean reward: 544.16
+Timesteps: 35300, Mean reward: 469.66
+Timesteps: 35400, Mean reward: 384.97
+Timesteps: 35500, Mean reward: 511.18
+Timesteps: 35600, Mean reward: 324.89
+Timesteps: 35700, Mean reward: 160.44
+Timesteps: 35800, Mean reward: 149.73
+Timesteps: 35900, Mean reward: 300.32
+Timesteps: 36000, Mean reward: 550.53
+Timesteps: 36100, Mean reward: 578.34
+Timesteps: 36200, Mean reward: 523.12
+Timesteps: 36300, Mean reward: 537.16
+Timesteps: 36400, Mean reward: 517.91
+Timesteps: 36500, Mean reward: 420.14
+Timesteps: 36600, Mean reward: 444.09
+Timesteps: 36700, Mean reward: 555.72
+Timesteps: 36800, Mean reward: 498.35
+Timesteps: 36900, Mean reward: 535.83
+Timesteps: 37000, Mean reward: 565.63
+Timesteps: 37100, Mean reward: 524.85
+Timesteps: 37200, Mean reward: 524.50
+Timesteps: 37300, Mean reward: 540.98
+Timesteps: 37400, Mean reward: 521.11
+Timesteps: 37500, Mean reward: 554.60
+Timesteps: 37600, Mean reward: 548.01
+Timesteps: 37700, Mean reward: 526.27
+Timesteps: 37800, Mean reward: 525.54
+Timesteps: 37900, Mean reward: 526.22
+Timesteps: 38000, Mean reward: 555.44
+Timesteps: 38100, Mean reward: 634.20
+Timesteps: 38200, Mean reward: 540.95
+Timesteps: 38300, Mean reward: 487.33
+Timesteps: 38400, Mean reward: 528.46
+Timesteps: 38500, Mean reward: 587.96
+Timesteps: 38600, Mean reward: 530.56
+Timesteps: 38700, Mean reward: 342.13
+Timesteps: 38800, Mean reward: 542.51
+Timesteps: 38900, Mean reward: 543.24
+Timesteps: 39000, Mean reward: 616.96
+Timesteps: 39100, Mean reward: 600.96
+Timesteps: 39200, Mean reward: 557.94
+Timesteps: 39300, Mean reward: 619.44
+Timesteps: 39400, Mean reward: 540.24
+Timesteps: 39500, Mean reward: 619.13
+Timesteps: 39600, Mean reward: 555.93
+Timesteps: 39700, Mean reward: 619.65
+Timesteps: 39800, Mean reward: 558.25
+Timesteps: 39900, Mean reward: 486.11
+Timesteps: 40000, Mean reward: 461.16
+Timesteps: 40100, Mean reward: 414.41
+Timesteps: 40200, Mean reward: 405.83
+Timesteps: 40300, Mean reward: 558.50
+Timesteps: 40400, Mean reward: 488.31
+Timesteps: 40500, Mean reward: 518.61
+Timesteps: 40600, Mean reward: 514.46
+Timesteps: 40700, Mean reward: 553.72
+Timesteps: 40800, Mean reward: 415.18
+Timesteps: 40900, Mean reward: 421.30
+Timesteps: 41000, Mean reward: 408.32
+Timesteps: 41100, Mean reward: 371.55
+Timesteps: 41200, Mean reward: 350.86
+Timesteps: 41300, Mean reward: 323.17
+Timesteps: 41400, Mean reward: 318.98
+Timesteps: 41500, Mean reward: 221.70
+Timesteps: 41600, Mean reward: 347.28
+Timesteps: 41700, Mean reward: 527.64
+Timesteps: 41800, Mean reward: 273.82
+Timesteps: 41900, Mean reward: 540.51
+Timesteps: 42000, Mean reward: 366.56
+Timesteps: 42100, Mean reward: 422.31
+Timesteps: 42200, Mean reward: 304.96
+Timesteps: 42300, Mean reward: 497.41
+Timesteps: 42400, Mean reward: 317.26
+Timesteps: 42500, Mean reward: 197.63
+Timesteps: 42600, Mean reward: 209.51
+Timesteps: 42700, Mean reward: 200.15
+Timesteps: 42800, Mean reward: 420.95
+Timesteps: 42900, Mean reward: 381.58
+Timesteps: 43000, Mean reward: 243.79
+Timesteps: 43100, Mean reward: 333.23
+Timesteps: 43200, Mean reward: 236.36
+Timesteps: 43300, Mean reward: 433.89
+Timesteps: 43400, Mean reward: 363.10
+Timesteps: 43500, Mean reward: 239.75
+Timesteps: 43600, Mean reward: 335.11
+Timesteps: 43700, Mean reward: 376.52
+Timesteps: 43800, Mean reward: 293.17
+Timesteps: 43900, Mean reward: 325.43
+Timesteps: 44000, Mean reward: 297.38
+Timesteps: 44100, Mean reward: 325.29
+Timesteps: 44200, Mean reward: 374.75
+Timesteps: 44300, Mean reward: 571.99
+Timesteps: 44400, Mean reward: 367.29
+Timesteps: 44500, Mean reward: 347.49
+Timesteps: 44600, Mean reward: 485.99
+Timesteps: 44700, Mean reward: 549.43
+Timesteps: 44800, Mean reward: 442.78
+Timesteps: 44900, Mean reward: 219.79
+Timesteps: 45000, Mean reward: 382.06
+Timesteps: 45100, Mean reward: 423.44
+Timesteps: 45200, Mean reward: 451.70
+Timesteps: 45300, Mean reward: 594.48
+Timesteps: 45400, Mean reward: 482.69
+Timesteps: 45500, Mean reward: 528.56
+Timesteps: 45600, Mean reward: 558.48
+Timesteps: 45700, Mean reward: 230.18
+Timesteps: 45800, Mean reward: 537.09
+Timesteps: 45900, Mean reward: 325.17
+Timesteps: 46000, Mean reward: 307.48
+Timesteps: 46100, Mean reward: 323.20
+Timesteps: 46200, Mean reward: 384.27
+Timesteps: 46300, Mean reward: 313.36
+Timesteps: 46400, Mean reward: 351.43
+Timesteps: 46500, Mean reward: 381.73
+Timesteps: 46600, Mean reward: 384.08
+Timesteps: 46700, Mean reward: 575.44
+Timesteps: 46800, Mean reward: 372.03
+Timesteps: 46900, Mean reward: 475.03
+Timesteps: 47000, Mean reward: 623.55
+Timesteps: 47100, Mean reward: 625.08
+Timesteps: 47200, Mean reward: 510.89
+Timesteps: 47300, Mean reward: 365.89
+Timesteps: 47400, Mean reward: 482.38
+Timesteps: 47500, Mean reward: 260.04
+Timesteps: 47600, Mean reward: 379.82
+Timesteps: 47700, Mean reward: 565.17
+Timesteps: 47800, Mean reward: 612.69
+Timesteps: 47900, Mean reward: 457.32
+Timesteps: 48000, Mean reward: 488.64
+Timesteps: 48100, Mean reward: 774.20
+Timesteps: 48200, Mean reward: 594.62
+Timesteps: 48300, Mean reward: 365.63
+Timesteps: 48400, Mean reward: 657.07
+Timesteps: 48500, Mean reward: 1065.28
+updated ranges:  {'mass': (0.95, 1.05), 'friction': (0.95, 1.05)}
+Mass were:     [3.92699082 2.71433605 5.0893801 ]
+Mass are now:  [3.93311546 2.69419833 5.33182559]
+Timesteps: 48600, Mean reward: 586.77
+Timesteps: 48700, Mean reward: 318.83
+Timesteps: 48800, Mean reward: 254.83
+Timesteps: 48900, Mean reward: 272.40
+Timesteps: 49000, Mean reward: 288.78
+Timesteps: 49100, Mean reward: 249.81
+Timesteps: 49200, Mean reward: 300.91
+Timesteps: 49300, Mean reward: 262.94
+Timesteps: 49400, Mean reward: 284.14
+Timesteps: 49500, Mean reward: 312.97
+Timesteps: 49600, Mean reward: 266.47
+Timesteps: 49700, Mean reward: 271.60
+Timesteps: 49800, Mean reward: 265.32
+Timesteps: 49900, Mean reward: 257.66
+Timesteps: 50000, Mean reward: 250.30
+Timesteps: 50100, Mean reward: 294.35
+Timesteps: 50200, Mean reward: 264.97
+Timesteps: 50300, Mean reward: 308.18
+Timesteps: 50400, Mean reward: 301.98
+Timesteps: 50500, Mean reward: 284.58
+Timesteps: 50600, Mean reward: 197.39
+Timesteps: 50700, Mean reward: 117.01
+Timesteps: 50800, Mean reward: 88.76
+Timesteps: 50900, Mean reward: 437.59
+Timesteps: 51000, Mean reward: 187.20
+Timesteps: 51100, Mean reward: 703.85
+Timesteps: 51200, Mean reward: 540.36
+Timesteps: 51300, Mean reward: 54.86
+Timesteps: 51400, Mean reward: 564.33
+Timesteps: 51500, Mean reward: 246.21
+Timesteps: 51600, Mean reward: 248.21
+Timesteps: 51700, Mean reward: 300.69
+Timesteps: 51800, Mean reward: 247.64
+Timesteps: 51900, Mean reward: 339.46
+Timesteps: 52000, Mean reward: 832.73
+updated ranges:  {'mass': (0.8999999999999999, 1.1), 'friction': (0.8999999999999999, 1.1)}
+Mass were:     [3.93311546 2.69419833 5.33182559]
+Mass are now:  [3.85506626 2.92765452 5.01090342]
+Timesteps: 52100, Mean reward: 599.52
+Timesteps: 52200, Mean reward: 456.79
+Timesteps: 52300, Mean reward: 487.77
+Timesteps: 52400, Mean reward: 674.40
+Timesteps: 52500, Mean reward: 383.29
+Timesteps: 52600, Mean reward: 382.32
+Timesteps: 52700, Mean reward: 635.10
+Timesteps: 52800, Mean reward: 133.48
+Timesteps: 52900, Mean reward: 127.33
+Timesteps: 53000, Mean reward: 138.26
+Timesteps: 53100, Mean reward: 638.71
+Timesteps: 53200, Mean reward: 559.62
+Timesteps: 53300, Mean reward: 600.05
+Timesteps: 53400, Mean reward: 534.22
+Timesteps: 53500, Mean reward: 545.00
+Timesteps: 53600, Mean reward: 499.60
+Timesteps: 53700, Mean reward: 675.47
+Timesteps: 53800, Mean reward: 510.45
+Timesteps: 53900, Mean reward: 631.76
+Timesteps: 54000, Mean reward: 616.21
+Timesteps: 54100, Mean reward: 897.93
+updated ranges:  {'mass': (0.8499999999999999, 1.1500000000000001), 'friction': (0.8499999999999999, 1.1500000000000001)}
+Mass were:     [3.85506626 2.92765452 5.01090342]
+Mass are now:  [4.08787803 3.00899881 5.63926678]
+Timesteps: 54200, Mean reward: 754.68
+Timesteps: 54300, Mean reward: 694.14
+Timesteps: 54400, Mean reward: 358.82
+Timesteps: 54500, Mean reward: 291.54
+Timesteps: 54600, Mean reward: 565.85
+Timesteps: 54700, Mean reward: 425.03
+Timesteps: 54800, Mean reward: 385.03
+Timesteps: 54900, Mean reward: 337.52
+Timesteps: 55000, Mean reward: 290.62
+Timesteps: 55100, Mean reward: 622.44
+Timesteps: 55200, Mean reward: 255.55
+Timesteps: 55300, Mean reward: 855.25
+updated ranges:  {'mass': (0.7999999999999998, 1.2000000000000002), 'friction': (0.7999999999999998, 1.2000000000000002)}
+Mass were:     [4.08787803 3.00899881 5.63926678]
+Mass are now:  [4.0875914  2.94326941 4.67622689]
+Timesteps: 55400, Mean reward: 325.52
+Timesteps: 55500, Mean reward: 746.08
+Timesteps: 55600, Mean reward: 899.28
+updated ranges:  {'mass': (0.7499999999999998, 1.2500000000000002), 'friction': (0.7499999999999998, 1.2500000000000002)}
+Mass were:     [4.0875914  2.94326941 4.67622689]
+Mass are now:  [3.05788717 2.05196865 5.72883712]
+Timesteps: 55700, Mean reward: 685.97
+Timesteps: 55800, Mean reward: 306.82
+Timesteps: 55900, Mean reward: 268.27
+Timesteps: 56000, Mean reward: 272.79
+Timesteps: 56100, Mean reward: 324.43
+Timesteps: 56200, Mean reward: 318.60
+Timesteps: 56300, Mean reward: 282.68
+Timesteps: 56400, Mean reward: 289.11
+Timesteps: 56500, Mean reward: 296.24
+Timesteps: 56600, Mean reward: 380.98
+Timesteps: 56700, Mean reward: 271.50
+Timesteps: 56800, Mean reward: 281.30
+Timesteps: 56900, Mean reward: 279.18
+Timesteps: 57000, Mean reward: 271.30
+Timesteps: 57100, Mean reward: 279.31
+Timesteps: 57200, Mean reward: 285.67
+Timesteps: 57300, Mean reward: 478.51
+Timesteps: 57400, Mean reward: 272.45
+Timesteps: 57500, Mean reward: 337.04
+Timesteps: 57600, Mean reward: 580.58
+Timesteps: 57700, Mean reward: 1362.58
+updated ranges:  {'mass': (0.6999999999999997, 1.3000000000000003), 'friction': (0.6999999999999997, 1.3000000000000003)}
+Mass were:     [3.05788717 2.05196865 5.72883712]
+Mass are now:  [4.62854504 2.22379873 3.57708738]
+Timesteps: 57800, Mean reward: 892.67
+updated ranges:  {'mass': (0.6499999999999997, 1.3500000000000003), 'friction': (0.6499999999999997, 1.3500000000000003)}
+Mass were:     [4.62854504 2.22379873 3.57708738]
+Mass are now:  [4.19617452 2.64842766 6.08680041]
+Timesteps: 57900, Mean reward: 1363.58
+updated ranges:  {'mass': (0.5999999999999996, 1.4000000000000004), 'friction': (0.5999999999999996, 1.4000000000000004)}
+Mass were:     [4.19617452 2.64842766 6.08680041]
+Mass are now:  [4.1028291  3.6654985  6.92676528]
+Timesteps: 58000, Mean reward: 1000.56
+updated ranges:  {'mass': (0.5499999999999996, 1.4500000000000004), 'friction': (0.5499999999999996, 1.4500000000000004)}
+Mass were:     [4.1028291  3.6654985  6.92676528]
+Mass are now:  [2.83673102 1.92425372 6.75903897]
+Timesteps: 58100, Mean reward: 1129.58
+updated ranges:  {'mass': (0.4999999999999996, 1.5000000000000004), 'friction': (0.4999999999999996, 1.5000000000000004)}
+Mass were:     [2.83673102 1.92425372 6.75903897]
+Mass are now:  [3.81621724 1.55455056 2.67478129]
+Timesteps: 58200, Mean reward: 1218.41
+updated ranges:  {'mass': (0.4499999999999996, 1.5500000000000005), 'friction': (0.4499999999999996, 1.5500000000000005)}
+Mass were:     [3.81621724 1.55455056 2.67478129]
+Mass are now:  [5.87842628 3.44198006 7.64446029]
+Timesteps: 58300, Mean reward: 1204.31
+updated ranges:  {'mass': (0.39999999999999963, 1.6000000000000005), 'friction': (0.39999999999999963, 1.6000000000000005)}
+Mass were:     [5.87842628 3.44198006 7.64446029]
+Mass are now:  [2.47277159 2.63742779 5.17455854]
+Timesteps: 58400, Mean reward: 1163.27
+updated ranges:  {'mass': (0.34999999999999964, 1.6500000000000006), 'friction': (0.34999999999999964, 1.6500000000000006)}
+Mass were:     [2.47277159 2.63742779 5.17455854]
+Mass are now:  [3.40249891 1.86845539 4.2417412 ]
+Timesteps: 58500, Mean reward: 1261.20
+updated ranges:  {'mass': (0.29999999999999966, 1.7000000000000006), 'friction': (0.29999999999999966, 1.7000000000000006)}
+Mass were:     [3.40249891 1.86845539 4.2417412 ]
+Mass are now:  [2.76399642 0.88898067 2.17095583]
+Timesteps: 58600, Mean reward: 1336.68
+updated ranges:  {'mass': (0.24999999999999967, 1.7500000000000007), 'friction': (0.24999999999999967, 1.7500000000000007)}
+Mass were:     [2.76399642 0.88898067 2.17095583]
+Mass are now:  [2.84231438 4.30227451 3.93223076]
+Timesteps: 58700, Mean reward: 1356.21
+updated ranges:  {'mass': (0.19999999999999968, 1.8000000000000007), 'friction': (0.19999999999999968, 1.8000000000000007)}
+Mass were:     [2.84231438 4.30227451 3.93223076]
+Mass are now:  [1.10782812 3.37927073 6.04024631]
+Timesteps: 58800, Mean reward: 1268.53
+updated ranges:  {'mass': (0.1499999999999997, 1.8500000000000008), 'friction': (0.1499999999999997, 1.8500000000000008)}
+Mass were:     [1.10782812 3.37927073 6.04024631]
+Mass are now:  [5.08758911 4.97872876 8.86014264]
+Timesteps: 58900, Mean reward: 616.51
+Timesteps: 59000, Mean reward: 1275.90
+updated ranges:  {'mass': (0.09999999999999969, 1.9000000000000008), 'friction': (0.09999999999999969, 1.9000000000000008)}
+Mass were:     [5.08758911 4.97872876 8.86014264]
+Mass are now:  [5.1874306  3.54213934 4.22195945]
+Timesteps: 59100, Mean reward: 1259.39
+updated ranges:  {'mass': (0.049999999999999684, 1.9500000000000008), 'friction': (0.049999999999999684, 1.9500000000000008)}
+Mass were:     [5.1874306  3.54213934 4.22195945]
+Mass are now:  [3.84642172 4.64846241 3.76219307]
+Timesteps: 59200, Mean reward: 1196.01
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.84642172 4.64846241 3.76219307]
+Mass are now:  [6.1700776  4.57374008 5.35602161]
+Timesteps: 59300, Mean reward: 632.32
+Timesteps: 59400, Mean reward: 1192.12
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.1700776  4.57374008 5.35602161]
+Mass are now:  [3.43802473 4.70809362 1.9056072 ]
+Timesteps: 59500, Mean reward: 1204.19
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.43802473 4.70809362 1.9056072 ]
+Mass are now:  [6.79766857 1.65189638 5.93682241]
+Timesteps: 59600, Mean reward: 846.27
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.79766857 1.65189638 5.93682241]
+Mass are now:  [2.36650064 0.9312285  4.61837153]
+Timesteps: 59700, Mean reward: 892.30
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.36650064 0.9312285  4.61837153]
+Mass are now:  [0.18871821 4.51278933 0.71309299]
+Timesteps: 59800, Mean reward: 1086.56
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.18871821 4.51278933 0.71309299]
+Mass are now:  [1.84025749 1.09843742 5.68827806]
+Timesteps: 59900, Mean reward: 887.85
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.84025749 1.09843742 5.68827806]
+Mass are now:  [1.70537633 3.41513011 6.31916021]
+Timesteps: 60000, Mean reward: 690.33
+Timesteps: 60100, Mean reward: 905.01
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.70537633 3.41513011 6.31916021]
+Mass are now:  [2.05375445 0.93189345 7.71165681]
+Timesteps: 60200, Mean reward: 1053.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.05375445 0.93189345 7.71165681]
+Mass are now:  [4.95658271 0.9088908  9.75829705]
+Timesteps: 60300, Mean reward: 986.71
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.95658271 0.9088908  9.75829705]
+Mass are now:  [4.83073953 1.04591434 4.08462013]
+Timesteps: 60400, Mean reward: 987.51
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.83073953 1.04591434 4.08462013]
+Mass are now:  [4.28084894 3.83022617 8.87765883]
+Timesteps: 60500, Mean reward: 705.30
+Timesteps: 60600, Mean reward: 927.59
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.28084894 3.83022617 8.87765883]
+Mass are now:  [3.42495374 4.34343453 1.99600391]
+Timesteps: 60700, Mean reward: 1132.46
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.42495374 4.34343453 1.99600391]
+Mass are now:  [0.30322614 4.61536289 7.15149321]
+Timesteps: 60800, Mean reward: 1489.27
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.30322614 4.61536289 7.15149321]
+Mass are now:  [3.90234314 1.44556952 4.79619721]
+Timesteps: 60900, Mean reward: 1166.97
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.90234314 1.44556952 4.79619721]
+Mass are now:  [4.46325648 0.71192078 3.84037925]
+Timesteps: 61000, Mean reward: 1312.13
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.46325648 0.71192078 3.84037925]
+Mass are now:  [4.88285539 3.86256716 9.79725932]
+Timesteps: 61100, Mean reward: 1278.11
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.88285539 3.86256716 9.79725932]
+Mass are now:  [5.436091   4.04324273 6.84954354]
+Timesteps: 61200, Mean reward: 383.27
+Timesteps: 61300, Mean reward: 1247.40
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.436091   4.04324273 6.84954354]
+Mass are now:  [5.501282   3.87966635 2.97313226]
+Timesteps: 61400, Mean reward: 1249.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.501282   3.87966635 2.97313226]
+Mass are now:  [0.53662991 0.45779774 5.51464449]
+Timesteps: 61500, Mean reward: 916.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.53662991 0.45779774 5.51464449]
+Mass are now:  [0.18867595 2.60844094 5.72447726]
+Timesteps: 61600, Mean reward: 395.13
+Timesteps: 61700, Mean reward: 1127.55
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.18867595 2.60844094 5.72447726]
+Mass are now:  [0.06178788 1.47122061 2.38647539]
+Timesteps: 61800, Mean reward: 461.29
+Timesteps: 61900, Mean reward: 1183.32
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.06178788 1.47122061 2.38647539]
+Mass are now:  [6.77549594 1.10340639 5.70485413]
+Timesteps: 62000, Mean reward: 803.05
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.77549594 1.10340639 5.70485413]
+Mass are now:  [3.74276822 2.7046694  9.69070115]
+Timesteps: 62100, Mean reward: 960.78
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.74276822 2.7046694  9.69070115]
+Mass are now:  [7.64499091 1.84344585 3.73004331]
+Timesteps: 62200, Mean reward: 1126.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.64499091 1.84344585 3.73004331]
+Mass are now:  [2.8237489  2.61069471 9.28535921]
+Timesteps: 62300, Mean reward: 1202.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.8237489  2.61069471 9.28535921]
+Mass are now:  [3.16823355 4.77644806 5.8098708 ]
+Timesteps: 62400, Mean reward: 1260.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.16823355 4.77644806 5.8098708 ]
+Mass are now:  [7.23478046 1.74089731 8.77084232]
+Timesteps: 62500, Mean reward: 655.70
+Timesteps: 62600, Mean reward: 961.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.23478046 1.74089731 8.77084232]
+Mass are now:  [4.3812694  1.09255514 9.42327629]
+Timesteps: 62700, Mean reward: 1097.17
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.3812694  1.09255514 9.42327629]
+Mass are now:  [1.93756174 2.41025607 7.03574573]
+Timesteps: 62800, Mean reward: 1078.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.93756174 2.41025607 7.03574573]
+Mass are now:  [7.09332907 1.77921491 4.03307299]
+Timesteps: 62900, Mean reward: 1253.73
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.09332907 1.77921491 4.03307299]
+Mass are now:  [1.51527043 1.39641504 9.4280675 ]
+Timesteps: 63000, Mean reward: 899.82
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.51527043 1.39641504 9.4280675 ]
+Mass are now:  [0.2199463  2.38139833 6.80017328]
+Timesteps: 63100, Mean reward: 1125.82
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.2199463  2.38139833 6.80017328]
+Mass are now:  [7.24403368 3.76407338 6.86324465]
+Timesteps: 63200, Mean reward: 904.83
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.24403368 3.76407338 6.86324465]
+Mass are now:  [7.64082724 3.72133096 5.61950924]
+Timesteps: 63300, Mean reward: 1016.65
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.64082724 3.72133096 5.61950924]
+Mass are now:  [0.25437599 2.29787092 6.74755699]
+Timesteps: 63400, Mean reward: 624.54
+Timesteps: 63500, Mean reward: 409.34
+Timesteps: 63600, Mean reward: 433.65
+Timesteps: 63700, Mean reward: 609.92
+Timesteps: 63800, Mean reward: 570.20
+Timesteps: 63900, Mean reward: 623.36
+Timesteps: 64000, Mean reward: 538.58
+Timesteps: 64100, Mean reward: 459.06
+Timesteps: 64200, Mean reward: 527.20
+Timesteps: 64300, Mean reward: 716.41
+Timesteps: 64400, Mean reward: 528.49
+Timesteps: 64500, Mean reward: 1340.73
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.25437599 2.29787092 6.74755699]
+Mass are now:  [7.13373026 4.45014168 9.04503456]
+Timesteps: 64600, Mean reward: 1168.59
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.13373026 4.45014168 9.04503456]
+Mass are now:  [5.06085805 0.39967147 0.16444929]
+Timesteps: 64700, Mean reward: 541.07
+Timesteps: 64800, Mean reward: 549.70
+Timesteps: 64900, Mean reward: 968.57
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.06085805 0.39967147 0.16444929]
+Mass are now:  [2.49509288 4.63132689 7.89841053]
+Timesteps: 65000, Mean reward: 832.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.49509288 4.63132689 7.89841053]
+Mass are now:  [0.16607994 1.84953764 8.19297701]
+Timesteps: 65100, Mean reward: 974.54
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.16607994 1.84953764 8.19297701]
+Mass are now:  [1.48476557 4.29262657 5.00915653]
+Timesteps: 65200, Mean reward: 739.44
+Timesteps: 65300, Mean reward: 769.42
+Timesteps: 65400, Mean reward: 886.77
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.48476557 4.29262657 5.00915653]
+Mass are now:  [0.95582189 4.08756441 7.72806582]
+Timesteps: 65500, Mean reward: 514.04
+Timesteps: 65600, Mean reward: 756.65
+Timesteps: 65700, Mean reward: 837.45
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.95582189 4.08756441 7.72806582]
+Mass are now:  [1.58852334 3.588316   8.32620013]
+Timesteps: 65800, Mean reward: 1095.41
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.58852334 3.588316   8.32620013]
+Mass are now:  [7.44498896 0.48254545 5.05756584]
+Timesteps: 65900, Mean reward: 1273.36
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.44498896 0.48254545 5.05756584]
+Mass are now:  [2.40008285 2.2026544  8.93924198]
+Timesteps: 66000, Mean reward: 735.38
+Timesteps: 66100, Mean reward: 597.01
+Timesteps: 66200, Mean reward: 1157.26
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.40008285 2.2026544  8.93924198]
+Mass are now:  [0.77560112 3.48067673 7.31986611]
+Timesteps: 66300, Mean reward: 1196.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.77560112 3.48067673 7.31986611]
+Mass are now:  [0.14653683 0.37606471 8.81887067]
+Timesteps: 66400, Mean reward: 1134.08
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.14653683 0.37606471 8.81887067]
+Mass are now:  [3.08983832 0.82567771 6.54511469]
+Timesteps: 66500, Mean reward: 1398.96
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.08983832 0.82567771 6.54511469]
+Mass are now:  [4.71319202 2.81131391 9.03084025]
+Timesteps: 66600, Mean reward: 1221.31
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.71319202 2.81131391 9.03084025]
+Mass are now:  [5.34094716 3.31965404 5.64853959]
+Timesteps: 66700, Mean reward: 1419.29
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.34094716 3.31965404 5.64853959]
+Mass are now:  [4.13683579 4.48228807 6.99912658]
+Timesteps: 66800, Mean reward: 1333.77
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.13683579 4.48228807 6.99912658]
+Mass are now:  [4.89737754 0.74778814 7.59050148]
+Timesteps: 66900, Mean reward: 1109.33
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.89737754 0.74778814 7.59050148]
+Mass are now:  [0.27678917 1.58979792 3.02924862]
+Timesteps: 67000, Mean reward: 1311.16
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.27678917 1.58979792 3.02924862]
+Mass are now:  [6.44974594 4.63538236 0.33347953]
+Timesteps: 67100, Mean reward: 1306.01
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.44974594 4.63538236 0.33347953]
+Mass are now:  [5.5849095  5.34729587 7.05665719]
+Timesteps: 67200, Mean reward: 1386.97
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.5849095  5.34729587 7.05665719]
+Mass are now:  [7.47641335 4.10556923 2.75793688]
+Timesteps: 67300, Mean reward: 1239.86
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.47641335 4.10556923 2.75793688]
+Mass are now:  [7.30430997 0.85205201 4.24192549]
+Timesteps: 67400, Mean reward: 1023.42
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.30430997 0.85205201 4.24192549]
+Mass are now:  [1.05126158 3.58129467 8.77690084]
+Timesteps: 67500, Mean reward: 1194.92
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.05126158 3.58129467 8.77690084]
+Mass are now:  [2.08552241 3.92807295 7.41233954]
+Timesteps: 67600, Mean reward: 1309.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.08552241 3.92807295 7.41233954]
+Mass are now:  [3.48460358 0.87129777 7.81373107]
+Timesteps: 67700, Mean reward: 1244.00
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.48460358 0.87129777 7.81373107]
+Mass are now:  [1.22395552 4.41535426 1.86940737]
+Timesteps: 67800, Mean reward: 1333.44
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.22395552 4.41535426 1.86940737]
+Mass are now:  [6.10807855 4.552034   9.9954126 ]
+Timesteps: 67900, Mean reward: 724.94
+Timesteps: 68000, Mean reward: 388.94
+Timesteps: 68100, Mean reward: 900.12
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.10807855 4.552034   9.9954126 ]
+Mass are now:  [6.90353227 2.31581338 4.25509809]
+Timesteps: 68200, Mean reward: 718.43
+Timesteps: 68300, Mean reward: 684.18
+Timesteps: 68400, Mean reward: 895.21
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.90353227 2.31581338 4.25509809]
+Mass are now:  [0.01545269 4.15897538 2.04484779]
+Timesteps: 68500, Mean reward: 1320.05
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.01545269 4.15897538 2.04484779]
+Mass are now:  [2.34163785 4.3382341  3.72579867]
+Timesteps: 68600, Mean reward: 637.79
+Timesteps: 68700, Mean reward: 976.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.34163785 4.3382341  3.72579867]
+Mass are now:  [0.0484225  1.27698474 8.48453866]
+Timesteps: 68800, Mean reward: 749.98
+Timesteps: 68900, Mean reward: 597.06
+Timesteps: 69000, Mean reward: 538.12
+Timesteps: 69100, Mean reward: 679.02
+Timesteps: 69200, Mean reward: 579.18
+Timesteps: 69300, Mean reward: 623.81
+Timesteps: 69400, Mean reward: 590.69
+Timesteps: 69500, Mean reward: 1252.76
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.0484225  1.27698474 8.48453866]
+Mass are now:  [2.15969789 1.41727502 7.81601163]
+Timesteps: 69600, Mean reward: 785.85
+Timesteps: 69700, Mean reward: 779.64
+Timesteps: 69800, Mean reward: 604.19
+Timesteps: 69900, Mean reward: 534.29
+Timesteps: 70000, Mean reward: 553.08
+Timesteps: 70100, Mean reward: 1264.17
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.15969789 1.41727502 7.81601163]
+Mass are now:  [7.59786104 3.90286962 7.04633639]
+Timesteps: 70200, Mean reward: 610.45
+Timesteps: 70300, Mean reward: 595.52
+Timesteps: 70400, Mean reward: 1381.50
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.59786104 3.90286962 7.04633639]
+Mass are now:  [1.05980095 3.04435352 5.85465186]
+Timesteps: 70500, Mean reward: 1045.06
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.05980095 3.04435352 5.85465186]
+Mass are now:  [4.60978076 3.61986157 1.80214046]
+Timesteps: 70600, Mean reward: 608.47
+Timesteps: 70700, Mean reward: 696.91
+Timesteps: 70800, Mean reward: 518.10
+Timesteps: 70900, Mean reward: 1304.59
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.60978076 3.61986157 1.80214046]
+Mass are now:  [6.08202724 4.15570988 4.0266425 ]
+Timesteps: 71000, Mean reward: 923.25
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.08202724 4.15570988 4.0266425 ]
+Mass are now:  [0.83492922 4.31486808 1.93819147]
+Timesteps: 71100, Mean reward: 1315.96
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.83492922 4.31486808 1.93819147]
+Mass are now:  [ 1.05863996  1.0211211  10.06171274]
+Timesteps: 71200, Mean reward: 786.78
+Timesteps: 71300, Mean reward: 708.12
+Timesteps: 71400, Mean reward: 794.96
+Timesteps: 71500, Mean reward: 1415.22
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [ 1.05863996  1.0211211  10.06171274]
+Mass are now:  [5.65849211 0.87538277 2.3572041 ]
+Timesteps: 71600, Mean reward: 1268.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.65849211 0.87538277 2.3572041 ]
+Mass are now:  [6.41926772 1.67779014 7.83256382]
+Timesteps: 71700, Mean reward: 1491.74
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.41926772 1.67779014 7.83256382]
+Mass are now:  [2.77624162 4.76355533 0.71181777]
+Timesteps: 71800, Mean reward: 1515.59
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.77624162 4.76355533 0.71181777]
+Mass are now:  [6.77562217 4.60448798 5.02948583]
+Timesteps: 71900, Mean reward: 548.59
+Timesteps: 72000, Mean reward: 530.25
+Timesteps: 72100, Mean reward: 1459.39
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.77562217 4.60448798 5.02948583]
+Mass are now:  [7.7146203  3.95729374 5.2460833 ]
+Timesteps: 72200, Mean reward: 596.72
+Timesteps: 72300, Mean reward: 1495.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.7146203  3.95729374 5.2460833 ]
+Mass are now:  [2.60709994 1.81693139 9.13530633]
+Timesteps: 72400, Mean reward: 1443.67
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.60709994 1.81693139 9.13530633]
+Mass are now:  [3.55452419 3.26980275 4.685856  ]
+Timesteps: 72500, Mean reward: 1536.14
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.55452419 3.26980275 4.685856  ]
+Mass are now:  [6.42632977 2.2707779  1.29434327]
+Timesteps: 72600, Mean reward: 562.36
+Timesteps: 72700, Mean reward: 1319.64
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.42632977 2.2707779  1.29434327]
+Mass are now:  [7.56813408 1.28542074 7.65742551]
+Timesteps: 72800, Mean reward: 1440.76
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.56813408 1.28542074 7.65742551]
+Mass are now:  [3.4973816  3.73128988 6.11833442]
+Timesteps: 72900, Mean reward: 1404.43
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.4973816  3.73128988 6.11833442]
+Mass are now:  [2.12335237 3.87720942 1.63347538]
+Timesteps: 73000, Mean reward: 1391.97
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.12335237 3.87720942 1.63347538]
+Mass are now:  [7.63910289 1.15646652 4.2572578 ]
+Timesteps: 73100, Mean reward: 1567.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.63910289 1.15646652 4.2572578 ]
+Mass are now:  [0.49745255 2.5046547  7.88422518]
+Timesteps: 73200, Mean reward: 1487.02
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.49745255 2.5046547  7.88422518]
+Mass are now:  [1.51371796 4.68859813 6.13880866]
+Timesteps: 73300, Mean reward: 1509.93
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.51371796 4.68859813 6.13880866]
+Mass are now:  [0.55470824 2.400798   6.75960942]
+Timesteps: 73400, Mean reward: 1393.67
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.55470824 2.400798   6.75960942]
+Mass are now:  [5.16553306 2.32962104 8.7166018 ]
+Timesteps: 73500, Mean reward: 1183.02
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.16553306 2.32962104 8.7166018 ]
+Mass are now:  [ 1.45101419  0.94011898 10.14741953]
+Timesteps: 73600, Mean reward: 1417.38
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [ 1.45101419  0.94011898 10.14741953]
+Mass are now:  [3.00674016 2.91248767 8.40281567]
+Timesteps: 73700, Mean reward: 1421.69
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.00674016 2.91248767 8.40281567]
+Mass are now:  [4.7887674  5.02248315 9.51457081]
+Timesteps: 73800, Mean reward: 701.45
+Timesteps: 73900, Mean reward: 1221.15
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.7887674  5.02248315 9.51457081]
+Mass are now:  [3.61378301 1.93877513 2.08134886]
+Timesteps: 74000, Mean reward: 1024.16
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.61378301 1.93877513 2.08134886]
+Mass are now:  [4.5231707  0.29998207 0.95116154]
+Timesteps: 74100, Mean reward: 757.93
+Timesteps: 74200, Mean reward: 1519.30
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.5231707  0.29998207 0.95116154]
+Mass are now:  [5.76949201 3.23804411 7.71253458]
+Timesteps: 74300, Mean reward: 1238.43
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.76949201 3.23804411 7.71253458]
+Mass are now:  [0.48827405 0.35323198 0.70395882]
+Timesteps: 74400, Mean reward: 696.63
+Timesteps: 74500, Mean reward: 593.43
+Timesteps: 74600, Mean reward: 1244.15
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.48827405 0.35323198 0.70395882]
+Mass are now:  [5.30970992 2.00763025 0.7724496 ]
+Timesteps: 74700, Mean reward: 1228.35
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.30970992 2.00763025 0.7724496 ]
+Mass are now:  [2.06767581 1.19197793 2.2068828 ]
+Timesteps: 74800, Mean reward: 920.94
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.06767581 1.19197793 2.2068828 ]
+Mass are now:  [1.44803196 5.08624302 2.43147136]
+Timesteps: 74900, Mean reward: 1286.73
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.44803196 5.08624302 2.43147136]
+Mass are now:  [2.09719179 1.94356323 7.94331727]
+Timesteps: 75000, Mean reward: 1100.98
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.09719179 1.94356323 7.94331727]
+Mass are now:  [3.02965445 4.80012015 2.56678716]
+Timesteps: 75100, Mean reward: 1376.22
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.02965445 4.80012015 2.56678716]
+Mass are now:  [5.83295916 0.58228311 6.44486057]
+Timesteps: 75200, Mean reward: 1359.66
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.83295916 0.58228311 6.44486057]
+Mass are now:  [7.71132672 2.38528214 1.98064974]
+Timesteps: 75300, Mean reward: 537.95
+Timesteps: 75400, Mean reward: 1370.18
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.71132672 2.38528214 1.98064974]
+Mass are now:  [7.68630232 2.61904028 4.83449631]
+Timesteps: 75500, Mean reward: 1307.35
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.68630232 2.61904028 4.83449631]
+Mass are now:  [7.31107035 0.86848601 6.86609221]
+Timesteps: 75600, Mean reward: 1421.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.31107035 0.86848601 6.86609221]
+Mass are now:  [6.63451609 0.02557948 3.25088327]
+Timesteps: 75700, Mean reward: 1420.74
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.63451609 0.02557948 3.25088327]
+Mass are now:  [2.41475196 2.65069698 8.47769027]
+Timesteps: 75800, Mean reward: 1478.22
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.41475196 2.65069698 8.47769027]
+Mass are now:  [0.14145409 0.58415348 4.04481911]
+Timesteps: 75900, Mean reward: 1428.02
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.14145409 0.58415348 4.04481911]
+Mass are now:  [2.04305639 1.28965707 1.86544728]
+Timesteps: 76000, Mean reward: 1508.99
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.04305639 1.28965707 1.86544728]
+Mass are now:  [7.27221438 3.59644907 5.53008053]
+Timesteps: 76100, Mean reward: 1433.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.27221438 3.59644907 5.53008053]
+Mass are now:  [0.56574003 4.74652742 8.38944529]
+Timesteps: 76200, Mean reward: 1462.82
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.56574003 4.74652742 8.38944529]
+Mass are now:  [4.85682461 2.48568365 0.47359324]
+Timesteps: 76300, Mean reward: 1295.72
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.85682461 2.48568365 0.47359324]
+Mass are now:  [1.50021281 4.35247919 2.80490622]
+Timesteps: 76400, Mean reward: 1210.78
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.50021281 4.35247919 2.80490622]
+Mass are now:  [1.36195178 1.06873356 1.07854159]
+Timesteps: 76500, Mean reward: 1514.11
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.36195178 1.06873356 1.07854159]
+Mass are now:  [0.47836213 0.85274127 6.83166624]
+Timesteps: 76600, Mean reward: 1480.46
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.47836213 0.85274127 6.83166624]
+Mass are now:  [1.90795306 3.46072086 1.97875316]
+Timesteps: 76700, Mean reward: 1155.70
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.90795306 3.46072086 1.97875316]
+Mass are now:  [6.60985772 1.53307506 9.50243884]
+Timesteps: 76800, Mean reward: 1361.91
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.60985772 1.53307506 9.50243884]
+Mass are now:  [7.31847306 4.80819328 5.76432907]
+Timesteps: 76900, Mean reward: 1336.95
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.31847306 4.80819328 5.76432907]
+Mass are now:  [5.49815651 3.58115907 2.82238252]
+Timesteps: 77000, Mean reward: 1453.36
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.49815651 3.58115907 2.82238252]
+Mass are now:  [7.7696438  2.62242678 6.10197848]
+Timesteps: 77100, Mean reward: 1360.07
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.7696438  2.62242678 6.10197848]
+Mass are now:  [7.74624511 0.63621264 9.59439208]
+Timesteps: 77200, Mean reward: 1316.84
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.74624511 0.63621264 9.59439208]
+Mass are now:  [4.38604012 0.63191797 5.5441208 ]
+Timesteps: 77300, Mean reward: 1268.43
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.38604012 0.63191797 5.5441208 ]
+Mass are now:  [5.62678217 4.15208947 1.28882881]
+Timesteps: 77400, Mean reward: 1298.03
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.62678217 4.15208947 1.28882881]
+Mass are now:  [6.8082766  4.57571034 9.67169567]
+Timesteps: 77500, Mean reward: 1284.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.8082766  4.57571034 9.67169567]
+Mass are now:  [3.87202377 0.3607764  5.37904401]
+Timesteps: 77600, Mean reward: 1426.76
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.87202377 0.3607764  5.37904401]
+Mass are now:  [4.53261645 0.61648018 5.451481  ]
+Timesteps: 77700, Mean reward: 1379.34
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.53261645 0.61648018 5.451481  ]
+Mass are now:  [4.72469091 2.02680947 1.61863235]
+Timesteps: 77800, Mean reward: 1336.87
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.72469091 2.02680947 1.61863235]
+Mass are now:  [4.59160923 3.15065891 2.21450941]
+Timesteps: 77900, Mean reward: 1347.69
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.59160923 3.15065891 2.21450941]
+Mass are now:  [5.19841721 0.51411346 2.80847943]
+Timesteps: 78000, Mean reward: 1260.38
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.19841721 0.51411346 2.80847943]
+Mass are now:  [0.84718262 4.401924   9.33835368]
+Timesteps: 78100, Mean reward: 1273.55
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.84718262 4.401924   9.33835368]
+Mass are now:  [7.66598605 0.6412374  3.71097579]
+Timesteps: 78200, Mean reward: 1239.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.66598605 0.6412374  3.71097579]
+Mass are now:  [2.35178753 3.95307799 8.93664484]
+Timesteps: 78300, Mean reward: 1291.85
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.35178753 3.95307799 8.93664484]
+Mass are now:  [0.48824473 3.58593829 8.35464612]
+Timesteps: 78400, Mean reward: 1276.87
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.48824473 3.58593829 8.35464612]
+Mass are now:  [2.88992387 3.12502326 2.1529076 ]
+Timesteps: 78500, Mean reward: 1421.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.88992387 3.12502326 2.1529076 ]
+Mass are now:  [6.9137048  2.57611359 7.23428955]
+Timesteps: 78600, Mean reward: 1325.92
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.9137048  2.57611359 7.23428955]
+Mass are now:  [5.74639745 4.19749865 6.62974207]
+Timesteps: 78700, Mean reward: 1267.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.74639745 4.19749865 6.62974207]
+Mass are now:  [4.03631082 1.98033158 3.96087684]
+Timesteps: 78800, Mean reward: 1481.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.03631082 1.98033158 3.96087684]
+Mass are now:  [0.26874996 3.08636805 7.81114936]
+Timesteps: 78900, Mean reward: 830.57
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.26874996 3.08636805 7.81114936]
+Mass are now:  [4.31162716 2.34353985 4.96591924]
+Timesteps: 79000, Mean reward: 1359.28
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.31162716 2.34353985 4.96591924]
+Mass are now:  [0.19720282 5.2939437  3.82491107]
+Timesteps: 79100, Mean reward: 1353.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.19720282 5.2939437  3.82491107]
+Mass are now:  [1.2767052  2.89935888 4.58948975]
+Timesteps: 79200, Mean reward: 1403.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.2767052  2.89935888 4.58948975]
+Mass are now:  [0.30794431 4.96403164 0.90965529]
+Timesteps: 79300, Mean reward: 1435.99
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.30794431 4.96403164 0.90965529]
+Mass are now:  [5.24547502 3.32889609 1.69198999]
+Timesteps: 79400, Mean reward: 1278.34
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.24547502 3.32889609 1.69198999]
+Mass are now:  [1.8626072  2.54543385 4.98267994]
+Timesteps: 79500, Mean reward: 753.04
+Timesteps: 79600, Mean reward: 1226.85
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.8626072  2.54543385 4.98267994]
+Mass are now:  [1.54999763 4.88614888 9.82002576]
+Timesteps: 79700, Mean reward: 1256.43
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.54999763 4.88614888 9.82002576]
+Mass are now:  [2.64252591 4.47610691 5.75895274]
+Timesteps: 79800, Mean reward: 1379.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.64252591 4.47610691 5.75895274]
+Mass are now:  [2.45691784 4.91367212 4.48669123]
+Timesteps: 79900, Mean reward: 1064.35
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.45691784 4.91367212 4.48669123]
+Mass are now:  [4.54370657 0.21335435 6.39878363]
+Timesteps: 80000, Mean reward: 69.46
+Timesteps: 80100, Mean reward: 186.02
+Timesteps: 80200, Mean reward: 475.90
+Timesteps: 80300, Mean reward: 472.67
+Timesteps: 80400, Mean reward: 476.54
+Timesteps: 80500, Mean reward: 479.04
+Timesteps: 80600, Mean reward: 485.84
+Timesteps: 80700, Mean reward: 484.27
+Timesteps: 80800, Mean reward: 485.85
+Timesteps: 80900, Mean reward: 485.31
+Timesteps: 81000, Mean reward: 487.72
+Timesteps: 81100, Mean reward: 497.10
+Timesteps: 81200, Mean reward: 488.70
+Timesteps: 81300, Mean reward: 488.89
+Timesteps: 81400, Mean reward: 775.76
+Timesteps: 81500, Mean reward: 503.01
+Timesteps: 81600, Mean reward: 1357.90
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.54370657 0.21335435 6.39878363]
+Mass are now:  [5.17123769 1.34432461 7.5183649 ]
+Timesteps: 81700, Mean reward: 1287.28
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.17123769 1.34432461 7.5183649 ]
+Mass are now:  [4.37424871 0.04343413 4.27750251]
+Timesteps: 81800, Mean reward: 1250.12
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.37424871 0.04343413 4.27750251]
+Mass are now:  [3.90042194 3.43900046 3.22687777]
+Timesteps: 81900, Mean reward: 659.10
+Timesteps: 82000, Mean reward: 1348.37
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.90042194 3.43900046 3.22687777]
+Mass are now:  [7.1786905  3.13208973 7.89834227]
+Timesteps: 82100, Mean reward: 1471.52
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.1786905  3.13208973 7.89834227]
+Mass are now:  [6.93440722 5.0780197  3.81729158]
+Timesteps: 82200, Mean reward: 1270.55
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.93440722 5.0780197  3.81729158]
+Mass are now:  [5.54373823 3.63194297 6.11119066]
+Timesteps: 82300, Mean reward: 1439.48
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.54373823 3.63194297 6.11119066]
+Mass are now:  [0.84633219 3.69589081 1.00755204]
+Timesteps: 82400, Mean reward: 1456.10
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.84633219 3.69589081 1.00755204]
+Mass are now:  [6.64260477 0.11177659 3.59174573]
+Timesteps: 82500, Mean reward: 829.36
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.64260477 0.11177659 3.59174573]
+Mass are now:  [3.81361041 2.82359885 2.81086732]
+Timesteps: 82600, Mean reward: 1272.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.81361041 2.82359885 2.81086732]
+Mass are now:  [7.04791805 2.58617762 4.27167877]
+Timesteps: 82700, Mean reward: 1354.99
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.04791805 2.58617762 4.27167877]
+Mass are now:  [4.21499666 4.56027073 0.84930706]
+Timesteps: 82800, Mean reward: 1267.30
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.21499666 4.56027073 0.84930706]
+Mass are now:  [7.3358697  5.13021015 2.80540002]
+Timesteps: 82900, Mean reward: 1313.68
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.3358697  5.13021015 2.80540002]
+Mass are now:  [7.2103392  4.96602798 1.79565679]
+Timesteps: 83000, Mean reward: 1379.42
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.2103392  4.96602798 1.79565679]
+Mass are now:  [3.39713038 1.98537511 9.65890342]
+Timesteps: 83100, Mean reward: 1337.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.39713038 1.98537511 9.65890342]
+Mass are now:  [3.49906974 3.47985553 7.10339347]
+Timesteps: 83200, Mean reward: 1276.76
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.49906974 3.47985553 7.10339347]
+Mass are now:  [1.87580282 2.00187855 2.82028182]
+Timesteps: 83300, Mean reward: 1367.83
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.87580282 2.00187855 2.82028182]
+Mass are now:  [1.23332907 4.80716239 7.4027768 ]
+Timesteps: 83400, Mean reward: 1357.51
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.23332907 4.80716239 7.4027768 ]
+Mass are now:  [5.61247849 5.17243232 4.71969739]
+Timesteps: 83500, Mean reward: 1482.28
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.61247849 5.17243232 4.71969739]
+Mass are now:  [4.37443981 0.63055627 1.60227185]
+Timesteps: 83600, Mean reward: 1399.25
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.37443981 0.63055627 1.60227185]
+Mass are now:  [1.40111442 4.66455733 5.77265326]
+Timesteps: 83700, Mean reward: 1447.05
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.40111442 4.66455733 5.77265326]
+Mass are now:  [1.63996473 0.52123343 1.58803175]
+Timesteps: 83800, Mean reward: 1322.11
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.63996473 0.52123343 1.58803175]
+Mass are now:  [5.48509601 5.0020189  0.98381799]
+Timesteps: 83900, Mean reward: 1430.39
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.48509601 5.0020189  0.98381799]
+Mass are now:  [7.84795218 1.23194125 3.89442483]
+Timesteps: 84000, Mean reward: 1417.84
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.84795218 1.23194125 3.89442483]
+Mass are now:  [4.69216862 3.94067439 9.87129888]
+Timesteps: 84100, Mean reward: 774.53
+Timesteps: 84200, Mean reward: 688.97
+Timesteps: 84300, Mean reward: 1332.08
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.69216862 3.94067439 9.87129888]
+Mass are now:  [6.77616913 5.2023124  5.30200628]
+Timesteps: 84400, Mean reward: 1356.20
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.77616913 5.2023124  5.30200628]
+Mass are now:  [5.9566812  3.91631071 9.45896931]
+Timesteps: 84500, Mean reward: 1510.44
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.9566812  3.91631071 9.45896931]
+Mass are now:  [7.59105278 0.47819476 2.24243947]
+Timesteps: 84600, Mean reward: 1423.70
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.59105278 0.47819476 2.24243947]
+Mass are now:  [3.86065319 1.11385778 9.6417503 ]
+Timesteps: 84700, Mean reward: 1357.88
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.86065319 1.11385778 9.6417503 ]
+Mass are now:  [0.57696155 5.02116972 6.92012387]
+Timesteps: 84800, Mean reward: 1428.36
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.57696155 5.02116972 6.92012387]
+Mass are now:  [0.7854812  2.31512799 3.8055521 ]
+Timesteps: 84900, Mean reward: 1257.04
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.7854812  2.31512799 3.8055521 ]
+Mass are now:  [6.22055732 1.72830696 1.80356195]
+Timesteps: 85000, Mean reward: 1312.72
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.22055732 1.72830696 1.80356195]
+Mass are now:  [3.97837389 3.31904992 8.95964037]
+Timesteps: 85100, Mean reward: 990.16
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.97837389 3.31904992 8.95964037]
+Mass are now:  [4.40885204 5.15426084 2.51731622]
+Timesteps: 85200, Mean reward: 1290.22
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.40885204 5.15426084 2.51731622]
+Mass are now:  [2.09716575 3.40854179 5.03339272]
+Timesteps: 85300, Mean reward: 1201.55
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.09716575 3.40854179 5.03339272]
+Mass are now:  [4.69385476 2.33230058 7.22419133]
+Timesteps: 85400, Mean reward: 1369.30
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.69385476 2.33230058 7.22419133]
+Mass are now:  [1.81796094 0.67934481 9.37210759]
+Timesteps: 85500, Mean reward: 1406.67
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.81796094 0.67934481 9.37210759]
+Mass are now:  [5.68669016 4.89716842 6.43611109]
+Timesteps: 85600, Mean reward: 1348.44
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.68669016 4.89716842 6.43611109]
+Mass are now:  [1.48583862 0.02532157 3.68538329]
+Timesteps: 85700, Mean reward: 1088.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.48583862 0.02532157 3.68538329]
+Mass are now:  [7.1713586  4.22803187 9.5398663 ]
+Timesteps: 85800, Mean reward: 1272.88
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.1713586  4.22803187 9.5398663 ]
+Mass are now:  [4.86815039 0.99905761 3.03275804]
+Timesteps: 85900, Mean reward: 751.68
+Timesteps: 86000, Mean reward: 1366.47
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.86815039 0.99905761 3.03275804]
+Mass are now:  [6.18861452 3.52389009 8.19513171]
+Timesteps: 86100, Mean reward: 691.82
+Timesteps: 86200, Mean reward: 1255.76
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.18861452 3.52389009 8.19513171]
+Mass are now:  [5.03119427 1.26201199 7.01097688]
+Timesteps: 86300, Mean reward: 1296.63
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.03119427 1.26201199 7.01097688]
+Mass are now:  [6.16613701 3.8246646  9.68534303]
+Timesteps: 86400, Mean reward: 589.41
+Timesteps: 86500, Mean reward: 865.21
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.16613701 3.8246646  9.68534303]
+Mass are now:  [1.54818145 5.29274379 3.41661763]
+Timesteps: 86600, Mean reward: 1216.89
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.54818145 5.29274379 3.41661763]
+Mass are now:  [2.15520611 4.51010706 6.63213901]
+Timesteps: 86700, Mean reward: 827.35
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.15520611 4.51010706 6.63213901]
+Mass are now:  [3.69248887 1.01416823 8.93517469]
+Timesteps: 86800, Mean reward: 761.91
+Timesteps: 86900, Mean reward: 1428.57
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.69248887 1.01416823 8.93517469]
+Mass are now:  [6.90024297 4.65022072 5.00154894]
+Timesteps: 87000, Mean reward: 1316.95
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.90024297 4.65022072 5.00154894]
+Mass are now:  [5.88435403 4.52943904 6.62323584]
+Timesteps: 87100, Mean reward: 1401.30
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.88435403 4.52943904 6.62323584]
+Mass are now:  [3.02821412 1.56300715 4.06224421]
+Timesteps: 87200, Mean reward: 1367.10
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.02821412 1.56300715 4.06224421]
+Mass are now:  [7.33367163 2.81373056 2.93901518]
+Timesteps: 87300, Mean reward: 1440.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.33367163 2.81373056 2.93901518]
+Mass are now:  [5.02415296 1.14342674 2.83721612]
+Timesteps: 87400, Mean reward: 1411.78
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.02415296 1.14342674 2.83721612]
+Mass are now:  [ 2.94910411  4.89610552 10.14375571]
+Timesteps: 87500, Mean reward: 1473.25
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [ 2.94910411  4.89610552 10.14375571]
+Mass are now:  [5.72500648 2.37313323 5.94211443]
+Timesteps: 87600, Mean reward: 1308.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.72500648 2.37313323 5.94211443]
+Mass are now:  [1.36969198 1.73570292 5.40303865]
+Timesteps: 87700, Mean reward: 1360.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.36969198 1.73570292 5.40303865]
+Mass are now:  [7.13935835 1.00619774 9.31961654]
+Timesteps: 87800, Mean reward: 1235.86
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.13935835 1.00619774 9.31961654]
+Mass are now:  [5.31158352 2.55509646 6.1716854 ]
+Timesteps: 87900, Mean reward: 524.02
+Timesteps: 88000, Mean reward: 1337.33
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.31158352 2.55509646 6.1716854 ]
+Mass are now:  [4.51996255 2.68262236 5.06971598]
+Timesteps: 88100, Mean reward: 1341.00
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.51996255 2.68262236 5.06971598]
+Mass are now:  [5.48475068 4.34754001 3.36640681]
+Timesteps: 88200, Mean reward: 1022.42
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.48475068 4.34754001 3.36640681]
+Mass are now:  [5.35155593 3.05665494 4.93217127]
+Timesteps: 88300, Mean reward: 1115.17
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.35155593 3.05665494 4.93217127]
+Mass are now:  [0.75417678 3.47460533 1.96832655]
+Timesteps: 88400, Mean reward: 403.61
+Timesteps: 88500, Mean reward: 1233.68
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.75417678 3.47460533 1.96832655]
+Mass are now:  [4.64299368 3.2225759  1.9644209 ]
+Timesteps: 88600, Mean reward: 1302.68
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.64299368 3.2225759  1.9644209 ]
+Mass are now:  [0.88063872 1.28224097 8.28982603]
+Timesteps: 88700, Mean reward: 861.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.88063872 1.28224097 8.28982603]
+Mass are now:  [0.99107042 2.58101934 3.41371905]
+Timesteps: 88800, Mean reward: 761.62
+Timesteps: 88900, Mean reward: 1240.51
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.99107042 2.58101934 3.41371905]
+Mass are now:  [7.78395717 0.25680735 4.73866298]
+Timesteps: 89000, Mean reward: 817.40
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.78395717 0.25680735 4.73866298]
+Mass are now:  [5.96827078 3.40333061 8.85486012]
+Timesteps: 89100, Mean reward: 277.94
+Timesteps: 89200, Mean reward: 989.26
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.96827078 3.40333061 8.85486012]
+Mass are now:  [7.06981442 0.69480181 1.27736713]
+Timesteps: 89300, Mean reward: 855.60
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.06981442 0.69480181 1.27736713]
+Mass are now:  [7.32434294 2.528247   8.37970114]
+Timesteps: 89400, Mean reward: 754.70
+Timesteps: 89500, Mean reward: 1156.07
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.32434294 2.528247   8.37970114]
+Mass are now:  [6.92622203 3.06905975 2.83951965]
+Timesteps: 89600, Mean reward: 694.18
+Timesteps: 89700, Mean reward: 959.77
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.92622203 3.06905975 2.83951965]
+Mass are now:  [3.07729785 4.32780473 9.93798506]
+Timesteps: 89800, Mean reward: 600.98
+Timesteps: 89900, Mean reward: 655.81
+Timesteps: 90000, Mean reward: 1164.88
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.07729785 4.32780473 9.93798506]
+Mass are now:  [4.2265083  2.95252924 4.53719891]
+Timesteps: 90100, Mean reward: 943.56
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.2265083  2.95252924 4.53719891]
+Mass are now:  [1.22314399 3.90160634 8.91618577]
+Timesteps: 90200, Mean reward: 1182.39
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.22314399 3.90160634 8.91618577]
+Mass are now:  [4.60495292 4.85705534 2.38727348]
+Timesteps: 90300, Mean reward: 1119.08
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.60495292 4.85705534 2.38727348]
+Mass are now:  [4.71505901 3.74947325 5.19942784]
+Timesteps: 90400, Mean reward: 678.40
+Timesteps: 90500, Mean reward: 1054.94
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.71505901 3.74947325 5.19942784]
+Mass are now:  [0.74845046 1.01772712 4.58327893]
+Timesteps: 90600, Mean reward: 1179.06
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.74845046 1.01772712 4.58327893]
+Mass are now:  [5.41550933 2.83220836 1.62106669]
+Timesteps: 90700, Mean reward: 1263.05
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.41550933 2.83220836 1.62106669]
+Mass are now:  [3.72058664 1.32533972 7.89478036]
+Timesteps: 90800, Mean reward: 896.90
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.72058664 1.32533972 7.89478036]
+Mass are now:  [2.48522073 3.18910614 1.67084319]
+Timesteps: 90900, Mean reward: 1384.57
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.48522073 3.18910614 1.67084319]
+Mass are now:  [1.22277893 0.88150982 6.9873557 ]
+Timesteps: 91000, Mean reward: 1257.95
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.22277893 0.88150982 6.9873557 ]
+Mass are now:  [6.2332089  2.92599793 6.0767448 ]
+Timesteps: 91100, Mean reward: 764.99
+Timesteps: 91200, Mean reward: 690.41
+Timesteps: 91300, Mean reward: 1281.96
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.2332089  2.92599793 6.0767448 ]
+Mass are now:  [4.92200836 5.35339615 2.36674658]
+Timesteps: 91400, Mean reward: 858.97
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.92200836 5.35339615 2.36674658]
+Mass are now:  [5.70105961 3.56197021 8.70905724]
+Timesteps: 91500, Mean reward: 816.98
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.70105961 3.56197021 8.70905724]
+Mass are now:  [5.6759361  3.41725768 3.92199377]
+Timesteps: 91600, Mean reward: 797.20
+Timesteps: 91700, Mean reward: 457.02
+Timesteps: 91800, Mean reward: 663.03
+Timesteps: 91900, Mean reward: 285.20
+Timesteps: 92000, Mean reward: 276.12
+Timesteps: 92100, Mean reward: 1134.01
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.6759361  3.41725768 3.92199377]
+Mass are now:  [1.65530649 1.48865709 7.15908528]
+Timesteps: 92200, Mean reward: 1075.78
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.65530649 1.48865709 7.15908528]
+Mass are now:  [0.29111921 2.93641899 8.46822603]
+Timesteps: 92300, Mean reward: 620.81
+Timesteps: 92400, Mean reward: 585.84
+Timesteps: 92500, Mean reward: 271.92
+Timesteps: 92600, Mean reward: 298.21
+Timesteps: 92700, Mean reward: 281.04
+Timesteps: 92800, Mean reward: 285.32
+Timesteps: 92900, Mean reward: 570.36
+Timesteps: 93000, Mean reward: 283.18
+Timesteps: 93100, Mean reward: 283.73
+Timesteps: 93200, Mean reward: 275.09
+Timesteps: 93300, Mean reward: 287.75
+Timesteps: 93400, Mean reward: 273.84
+Timesteps: 93500, Mean reward: 268.27
+Timesteps: 93600, Mean reward: 1281.64
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.29111921 2.93641899 8.46822603]
+Mass are now:  [6.79002262 2.10693293 5.77660819]
+Timesteps: 93700, Mean reward: 286.58
+Timesteps: 93800, Mean reward: 983.00
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.79002262 2.10693293 5.77660819]
+Mass are now:  [2.56507646 2.50767354 1.13539762]
+Timesteps: 93900, Mean reward: 441.54
+Timesteps: 94000, Mean reward: 291.24
+Timesteps: 94100, Mean reward: 342.61
+Timesteps: 94200, Mean reward: 295.27
+Timesteps: 94300, Mean reward: 391.91
+Timesteps: 94400, Mean reward: 978.48
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.56507646 2.50767354 1.13539762]
+Mass are now:  [4.15160284 4.45487298 4.50873445]
+Timesteps: 94500, Mean reward: 422.99
+Timesteps: 94600, Mean reward: 463.84
+Timesteps: 94700, Mean reward: 680.05
+Timesteps: 94800, Mean reward: 268.22
+Timesteps: 94900, Mean reward: 316.29
+Timesteps: 95000, Mean reward: 623.85
+Timesteps: 95100, Mean reward: 1380.14
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.15160284 4.45487298 4.50873445]
+Mass are now:  [4.26092502 5.0469365  3.61683584]
+Timesteps: 95200, Mean reward: 837.73
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.26092502 5.0469365  3.61683584]
+Mass are now:  [1.24069581 0.48046073 1.01478487]
+Timesteps: 95300, Mean reward: 1346.67
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.24069581 0.48046073 1.01478487]
+Mass are now:  [1.96078466 5.33163131 4.64056719]
+Timesteps: 95400, Mean reward: 1267.17
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.96078466 5.33163131 4.64056719]
+Mass are now:  [4.24535921 3.78848034 5.62093334]
+Timesteps: 95500, Mean reward: 1058.83
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.24535921 3.78848034 5.62093334]
+Mass are now:  [3.23191087 5.00878189 8.26880308]
+Timesteps: 95600, Mean reward: 1042.84
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.23191087 5.00878189 8.26880308]
+Mass are now:  [5.7603119  4.9269646  3.73172455]
+Timesteps: 95700, Mean reward: 1139.14
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.7603119  4.9269646  3.73172455]
+Mass are now:  [1.1382433  0.01923988 3.88405601]
+Timesteps: 95800, Mean reward: 847.18
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.1382433  0.01923988 3.88405601]
+Mass are now:  [3.81601625 0.41486281 8.61757548]
+Timesteps: 95900, Mean reward: 301.04
+Timesteps: 96000, Mean reward: 915.04
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.81601625 0.41486281 8.61757548]
+Mass are now:  [6.56512753 3.89400604 6.83863677]
+Timesteps: 96100, Mean reward: 945.87
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.56512753 3.89400604 6.83863677]
+Mass are now:  [7.10336351 0.78877023 0.79513191]
+Timesteps: 96200, Mean reward: 1115.79
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.10336351 0.78877023 0.79513191]
+Mass are now:  [4.24525488 1.95511311 7.67885854]
+Timesteps: 96300, Mean reward: 1133.98
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.24525488 1.95511311 7.67885854]
+Mass are now:  [0.51814084 3.73702174 9.41500813]
+Timesteps: 96400, Mean reward: 888.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.51814084 3.73702174 9.41500813]
+Mass are now:  [1.2646519  4.0346862  6.23112914]
+Timesteps: 96500, Mean reward: 928.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.2646519  4.0346862  6.23112914]
+Mass are now:  [3.88914546 4.52211274 4.26647316]
+Timesteps: 96600, Mean reward: 936.25
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.88914546 4.52211274 4.26647316]
+Mass are now:  [6.13919832 1.32426644 0.77956515]
+Timesteps: 96700, Mean reward: 1060.33
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.13919832 1.32426644 0.77956515]
+Mass are now:  [0.45318876 0.34675256 3.53105665]
+Timesteps: 96800, Mean reward: 919.49
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.45318876 0.34675256 3.53105665]
+Mass are now:  [2.75626873 4.24447014 4.29617862]
+Timesteps: 96900, Mean reward: 1129.07
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.75626873 4.24447014 4.29617862]
+Mass are now:  [1.51562115 0.10030148 8.65538498]
+Timesteps: 97000, Mean reward: 1309.79
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.51562115 0.10030148 8.65538498]
+Mass are now:  [7.42734554 1.68169221 0.4462652 ]
+Timesteps: 97100, Mean reward: 684.45
+Timesteps: 97200, Mean reward: 917.15
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.42734554 1.68169221 0.4462652 ]
+Mass are now:  [1.20393992 1.71381689 8.39874586]
+Timesteps: 97300, Mean reward: 1386.67
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [1.20393992 1.71381689 8.39874586]
+Mass are now:  [5.55783972 4.91014869 4.95759429]
+Timesteps: 97400, Mean reward: 1367.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.55783972 4.91014869 4.95759429]
+Mass are now:  [6.82665132 5.38025055 8.90999926]
+Timesteps: 97500, Mean reward: 987.87
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.82665132 5.38025055 8.90999926]
+Mass are now:  [3.38888879 2.18909201 1.97132396]
+Timesteps: 97600, Mean reward: 506.44
+Timesteps: 97700, Mean reward: 933.74
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.38888879 2.18909201 1.97132396]
+Mass are now:  [6.39331743 2.9365493  1.59963241]
+Timesteps: 97800, Mean reward: 1161.07
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.39331743 2.9365493  1.59963241]
+Mass are now:  [6.53129852 5.29046167 8.49718444]
+Timesteps: 97900, Mean reward: 488.66
+Timesteps: 98000, Mean reward: 800.94
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [6.53129852 5.29046167 8.49718444]
+Mass are now:  [ 0.97778153  0.05556604 10.03001236]
+Timesteps: 98100, Mean reward: 568.97
+Timesteps: 98200, Mean reward: 679.15
+Timesteps: 98300, Mean reward: 895.63
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [ 0.97778153  0.05556604 10.03001236]
+Mass are now:  [4.37390451 1.41671971 6.31715773]
+Timesteps: 98400, Mean reward: 605.55
+Timesteps: 98500, Mean reward: 910.99
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.37390451 1.41671971 6.31715773]
+Mass are now:  [3.66161452 4.09533482 7.2533928 ]
+Timesteps: 98600, Mean reward: 1304.92
+updated ranges: /home/saja/workspace/anaconda3/envs/mldl/lib/python3.7/site-packages/stable_baselines3/common/evaluation.py:71: UserWarning: Evaluation environment is not wrapped with a ``Monitor`` wrapper. This may result in reporting modified episode lengths and rewards, if other wrappers happen to modify these. Consider wrapping environment first with ``Monitor`` wrapper.
+  UserWarning,
+/home/saja/workspace/anaconda3/envs/mldl/lib/python3.7/site-packages/stable_baselines3/common/save_util.py:278: UserWarning: Path 'AutoDR/SAC_steps_100000_lr_0.001_gamma_0.995_tau_0.01_ent_coef_auto' does not exist. Will create it.
+  warnings.warn(f"Path '{path.parent}' does not exist. Will create it.")
+ {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.66161452 4.09533482 7.2533928 ]
+Mass are now:  [3.35661783 4.42646354 2.79357316]
+Timesteps: 98700, Mean reward: 703.74
+Timesteps: 98800, Mean reward: 1210.98
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.35661783 4.42646354 2.79357316]
+Mass are now:  [3.14693106 2.52337655 1.04504899]
+Timesteps: 98900, Mean reward: 1360.23
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.14693106 2.52337655 1.04504899]
+Mass are now:  [7.83727256 5.18622098 4.31552203]
+Timesteps: 99000, Mean reward: 1258.58
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.83727256 5.18622098 4.31552203]
+Mass are now:  [4.79962426 2.69755798 4.45631099]
+Timesteps: 99100, Mean reward: 1418.81
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.79962426 2.69755798 4.45631099]
+Mass are now:  [2.78741179 4.64597162 3.23728922]
+Timesteps: 99200, Mean reward: 1409.59
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.78741179 4.64597162 3.23728922]
+Mass are now:  [3.8086779  3.34352929 5.72693633]
+Timesteps: 99300, Mean reward: 1217.02
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.8086779  3.34352929 5.72693633]
+Mass are now:  [5.92417317 0.56502381 5.90546673]
+Timesteps: 99400, Mean reward: 979.31
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [5.92417317 0.56502381 5.90546673]
+Mass are now:  [2.633087   0.22256643 4.85665066]
+Timesteps: 99500, Mean reward: 1332.10
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.633087   0.22256643 4.85665066]
+Mass are now:  [4.93136359 0.51126792 7.55183097]
+Timesteps: 99600, Mean reward: 955.88
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [4.93136359 0.51126792 7.55183097]
+Mass are now:  [0.46334594 1.48618198 1.89800795]
+Timesteps: 99700, Mean reward: 1444.31
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [0.46334594 1.48618198 1.89800795]
+Mass are now:  [2.55728209 0.26705485 6.31608237]
+Timesteps: 99800, Mean reward: 1327.63
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [2.55728209 0.26705485 6.31608237]
+Mass are now:  [7.1846869  4.11527577 6.89609406]
+Timesteps: 99900, Mean reward: 1328.13
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [7.1846869  4.11527577 6.89609406]
+Mass are now:  [3.42952488 4.48955272 1.52553918]
+Timesteps: 100000, Mean reward: 1202.24
+updated ranges:  {'mass': (0, 2), 'friction': (0, 2)}
+Mass were:     [3.42952488 4.48955272 1.52553918]
+Mass are now:  [6.9960746  3.59263038 3.06032404]
